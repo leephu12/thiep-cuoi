@@ -104,7 +104,9 @@ section{position:relative}
 @keyframes cue{to{top:44px}}
 
 /* ---------- 01 COUPLE : photo big -> small, names slide in ---------- */
-.couple{height:360vh;background:var(--ivory)}
+.couple{height:360vh;background:#BC8E90 url(assets/deco/damask3.jpg) 50% 0/250px 253px repeat}
+.couple .cmat{position:absolute;left:0;top:0;opacity:0;pointer-events:none;--r:clamp(9px,.9vw,13px);background:#FBF6EC;-webkit-mask:radial-gradient(var(--r) at 50% var(--r),#000 96%,#0000) 0 0/calc(2*var(--r)) calc(2*var(--r)) round no-repeat,radial-gradient(var(--r) at 50% var(--r),#000 96%,#0000) 0 100%/calc(2*var(--r)) calc(2*var(--r)) round no-repeat,radial-gradient(var(--r) at var(--r) 50%,#000 96%,#0000) 0 0/calc(2*var(--r)) calc(2*var(--r)) no-repeat round,radial-gradient(var(--r) at var(--r) 50%,#000 96%,#0000) 100% 0/calc(2*var(--r)) calc(2*var(--r)) no-repeat round,linear-gradient(#000 0 0) 50% 50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)) no-repeat;mask:radial-gradient(var(--r) at 50% var(--r),#000 96%,#0000) 0 0/calc(2*var(--r)) calc(2*var(--r)) round no-repeat,radial-gradient(var(--r) at 50% var(--r),#000 96%,#0000) 0 100%/calc(2*var(--r)) calc(2*var(--r)) round no-repeat,radial-gradient(var(--r) at var(--r) 50%,#000 96%,#0000) 0 0/calc(2*var(--r)) calc(2*var(--r)) no-repeat round,radial-gradient(var(--r) at var(--r) 50%,#000 96%,#0000) 100% 0/calc(2*var(--r)) calc(2*var(--r)) no-repeat round,linear-gradient(#000 0 0) 50% 50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)) no-repeat}
+.couple .cmat::after{content:"";position:absolute;inset:calc(var(--r)*2.1);pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath d='M0 2.6q3.5-2.6 7 0t7 0M0 5.4q3.5-2.6 7 0t7 0' fill='none' stroke='%238E5A62' stroke-width='.8'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath d='M0 2.6q3.5-2.6 7 0t7 0M0 5.4q3.5-2.6 7 0t7 0' fill='none' stroke='%238E5A62' stroke-width='.8'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 8 14'%3E%3Cpath d='M2.6 0q-2.6 3.5 0 7t0 7M5.4 0q-2.6 3.5 0 7t0 7' fill='none' stroke='%238E5A62' stroke-width='.8'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 8 14'%3E%3Cpath d='M2.6 0q-2.6 3.5 0 7t0 7M5.4 0q-2.6 3.5 0 7t0 7' fill='none' stroke='%238E5A62' stroke-width='.8'/%3E%3C/svg%3E");background-position:0 0,0 100%,0 0,100% 0;background-size:14px 8px,14px 8px,8px 14px,8px 14px;background-repeat:round no-repeat,round no-repeat,no-repeat round,no-repeat round}
 .couple .frame{position:absolute;inset:0;overflow:hidden;will-change:transform;transform-origin:50% 50%}
 .fin{position:absolute;inset:0;will-change:transform;transform-origin:50% 50%}
 .couple .frame img{width:100%;height:100%;object-fit:cover;will-change:transform}
@@ -119,7 +121,7 @@ section{position:relative}
 .couple .txt .nimg.amp{margin:.6vh auto}
 .couple .txt .and{font-family:var(--pinyon);font-size:clamp(34px,4.2vw,62px);line-height:1;margin:-.1em 0 -.05em}
 .couple .txt .cdate{margin-top:clamp(14px,2vw,26px)}
-.couple .edge{position:absolute;color:var(--rose-deep);opacity:0;will-change:opacity}
+.couple .edge{position:absolute;color:#FBF4EA;text-shadow:0 1px 8px rgba(80,40,45,.45);opacity:0;will-change:opacity}
 .couple .edge.l{left:calc(var(--gutter) - 2px);top:50%;writing-mode:vertical-rl;transform:translateY(-50%) rotate(180deg)}
 .couple .edge.r{right:calc(var(--gutter) - 2px);top:50%;writing-mode:vertical-rl;transform:translateY(-50%)}
 .couple .edge.b{left:0;right:0;bottom:2.4vh;text-align:center}
@@ -296,6 +298,7 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
   <!-- 01 · COUPLE (like the reference: photo + big script names) -->
   <section class="couple" id="couple">
     <div class="stick">
+      <div class="cmat" id="cMat"></div>
       <div class="frame" id="cFrame">
         <div class="fin" id="cIn">
           <img decoding="async" id="cImg" src="assets/img/kiss-cake.jpg" alt="Ngọc Phú và Lưu Tuyến" style="object-position:50% 30%">
@@ -411,7 +414,7 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
 
   /* ---------- cached layout (read once, never during scroll) ---------- */
   var vw,vh,W0,H0,HEAD, L={};
-  var couple=$('couple'), cFrame=$('cFrame'), cIn=$('cIn'), cImg2=$('cImg2'), cW2=$('cImg2Wrap'), cTxt=$('cTxt'), cKick=$('cKick'), cN1=$('cN1'), cN2=$('cN2'), cAnd=$('cAnd'), cDate=$('cDate'), eL=$('eL'), eR=$('eR'), eB=$('eB');
+  var couple=$('couple'), cFrame=$('cFrame'), cIn=$('cIn'), cImg2=$('cImg2'), cW2=$('cImg2Wrap'), cTxt=$('cTxt'), cKick=$('cKick'), cN1=$('cN1'), cN2=$('cN2'), cAnd=$('cAnd'), cDate=$('cDate'), eL=$('eL'), eR=$('eR'), eB=$('eB'), cMat=$('cMat');
   var hb=$('heroBlur'), hs=$('heroSharp'), hv=$('heroVeil'), hf=$('heroFoot'), hWel=$('hWel'), hDate=$('hDate');
   var zoom=$('zoom'), zPic=$('zPic'), zIn=$('zIn'), zA=$('zA'), zB=$('zB'), zK=$('zK');
   var dollies=[].slice.call(document.querySelectorAll('[data-dolly]')).map(function(el){return {el:el}});
@@ -470,7 +473,7 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
     if(near(L.couple.top,L.couple.h,y)){
       var cp=prog('couple',y);
       var sk=ease(seg(cp,.64,.9));
-      var iy=Math.max(HEAD+16,vh*.12), ix=vw<820?18:Math.max(18,vw*.16), ib=vh*.06;
+      var mp=vw<820?24:Math.min(44,Math.max(30,vw*.028)), iy=HEAD+mp+16, ix=vw<820?30:Math.max(30+mp,vw*.16), ib=mp+44;
       var sx=lerp(1,(vw-2*ix)/vw,sk), sy=lerp(1,(vh-iy-ib)/vh,sk), ty=lerp(0,(iy-ib)/2,sk);
       var m=Math.max(sx,sy), zk=lerp(1.22,1.02,eout(seg(cp,0,.9)));
       set(cFrame,'transform','translate3d(0,'+ty.toFixed(1)+'px,0) scale('+sx.toFixed(4)+','+sy.toFixed(4)+')');
@@ -486,6 +489,8 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
       set(cDate,'opacity',dd.toFixed(3)); set(cDate,'transform','translate3d(0,'+lerp(30,0,dd).toFixed(1)+'px,0)');
       var out=seg(cp,.6,.76);
       set(cTxt,'opacity',(1-out).toFixed(3)); set(cTxt,'transform','translate3d(0,'+(-out*14).toFixed(2)+'vh,0) scale('+lerp(1,.9,out).toFixed(4)+')');
+      set(cMat,'left',(ix-mp)+'px'); set(cMat,'top',(iy-mp)+'px'); set(cMat,'width',(vw-2*ix+2*mp)+'px'); set(cMat,'height',(vh-iy-ib+2*mp)+'px');
+      var mo=seg(cp,.78,.92); set(cMat,'opacity',mo.toFixed(3)); set(cMat,'transform','scale('+lerp(1.04,1,mo).toFixed(4)+')');
       var eo=seg(cp,.84,.97).toFixed(3); set(eL,'opacity',eo); set(eR,'opacity',eo); set(eB,'opacity',eo);
     }
 
