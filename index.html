@@ -284,7 +284,7 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
   <span class="tiny"><span class="f">18 · 12 · 2026</span><span class="s">18.12.26</span></span>
 </div>
 
-<audio id="bgm" src="assets/audio/nhac-nen.mp3" loop preload="none"></audio>
+<audio id="bgm" src="assets/audio/nhac-nen.mp3" loop preload="auto" autoplay></audio>
 <button class="music" id="musicBtn" type="button" aria-label="Bật nhạc nền" aria-pressed="false"><span class="lbl">Bật nhạc</span><i></i><i></i><i></i><i></i></button>
 
 <main>
@@ -578,6 +578,8 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
     var evs=['pointerdown','touchend','keydown'];
     function off(){ evs.forEach(function(n){ window.removeEventListener(n,first,true); }); }
     evs.forEach(function(n){ window.addEventListener(n,first,true); });
+    /* try to start right away; browsers that block unmuted autoplay fall back to the first tap */
+    a.preload='auto'; a.volume=0; var tr=a.play(); if(tr&&tr.then) tr.then(function(){ off(); ui(true); fade(TARGET,2600); }).catch(function(){ ui(false); });
     b.addEventListener('click',function(){ off(); if(a.paused||!b.classList.contains('on')){ want=true; play(); } else { want=false; stop(); } });
     document.addEventListener('visibilitychange',function(){ if(document.hidden){ if(!a.paused) a.pause(); } else if(want&&b.classList.contains('on')) a.play().catch(function(){}); });
   })();
