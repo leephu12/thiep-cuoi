@@ -105,10 +105,11 @@ section{position:relative}
 
 /* ---------- 01 COUPLE : photo big -> small, names slide in ---------- */
 .couple{height:360vh;background-color:#BC8E90;background-image:radial-gradient(circle,rgba(255,236,236,.34) 1.6px,transparent 2.2px),radial-gradient(circle,rgba(255,236,236,.34) 1.6px,transparent 2.2px);background-size:22px 22px;background-position:0 0,11px 11px}
+.couple .cglow{position:absolute;left:0;top:0;opacity:0;pointer-events:none;background:radial-gradient(closest-side,rgba(255,238,232,.4),rgba(255,238,232,.12) 60%,rgba(255,238,232,0))}
 .couple .cmat{position:absolute;left:0;top:0;opacity:0;pointer-events:none;filter:drop-shadow(0 18px 26px rgba(45,12,20,.45))}
 .couple .cmat .m1{position:absolute;inset:0;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath d='M0 13 L0 8 Q2.3 2.7 4.6 8.7 Q7.6 1.3 10.7 7.9 Q16.1 2.5 21.5 6.9 Q23.2 2.7 24.8 7.8 Q30.9 -0.6 37.0 7.8 Q42.8 0.3 48.6 9.2 Q55.5 -0.5 62.5 6.7 Q67.2 3.1 72.0 7.7 Q74.8 1.0 77.6 6.7 Q80.4 1.1 83.2 8.0 Q86.1 0.3 89.0 7.2 Q93.3 0.5 97.5 6.7 Q104.0 1.6 110.6 8.4 Q113.2 3.3 115.8 9.0 Q118.0 0.7 120.3 8.6 Q126.0 3.1 131.8 7.8 Q138.3 2.0 144.8 7.4 Q149.8 2.8 154.8 9.0 Q159.3 1.7 163.9 6.7 Q166.8 2.5 169.8 7.8 Q172.3 1.5 174.9 8.6 Q180.4 0.9 185.9 7.8 Q190.5 2.4 195.0 8.1 Q197.5 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/200px 13px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath transform='matrix%281 0 0 -1 0 13%29' d='M0 13 L0 8 Q7.2 3.1 14.5 6.8 Q16.5 2.7 18.5 8.7 Q24.0 0.6 29.5 8.3 Q34.7 1.7 39.8 7.0 Q43.9 0.9 48.0 8.6 Q55.4 3.1 62.9 8.1 Q67.1 0.4 71.3 6.7 Q72.9 1.2 74.6 7.5 Q78.4 2.9 82.1 8.1 Q87.0 0.3 91.9 6.7 Q95.3 -0.1 98.8 8.0 Q106.3 2.0 113.8 7.1 Q120.6 2.5 127.5 8.7 Q134.4 2.4 141.4 8.8 Q145.0 3.2 148.6 9.3 Q151.1 2.3 153.5 8.6 Q157.8 1.5 162.1 8.0 Q169.1 1.4 176.2 8.9 Q179.8 2.8 183.4 9.1 Q187.7 1.6 192.0 9.2 Q196.0 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 100%/200px 13px repeat-x,linear-gradient(#000 0 0) 0 50%/100% calc(100% - 24px) no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath d='M0 13 L0 8 Q2.3 2.7 4.6 8.7 Q7.6 1.3 10.7 7.9 Q16.1 2.5 21.5 6.9 Q23.2 2.7 24.8 7.8 Q30.9 -0.6 37.0 7.8 Q42.8 0.3 48.6 9.2 Q55.5 -0.5 62.5 6.7 Q67.2 3.1 72.0 7.7 Q74.8 1.0 77.6 6.7 Q80.4 1.1 83.2 8.0 Q86.1 0.3 89.0 7.2 Q93.3 0.5 97.5 6.7 Q104.0 1.6 110.6 8.4 Q113.2 3.3 115.8 9.0 Q118.0 0.7 120.3 8.6 Q126.0 3.1 131.8 7.8 Q138.3 2.0 144.8 7.4 Q149.8 2.8 154.8 9.0 Q159.3 1.7 163.9 6.7 Q166.8 2.5 169.8 7.8 Q172.3 1.5 174.9 8.6 Q180.4 0.9 185.9 7.8 Q190.5 2.4 195.0 8.1 Q197.5 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/200px 13px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath transform='matrix%281 0 0 -1 0 13%29' d='M0 13 L0 8 Q7.2 3.1 14.5 6.8 Q16.5 2.7 18.5 8.7 Q24.0 0.6 29.5 8.3 Q34.7 1.7 39.8 7.0 Q43.9 0.9 48.0 8.6 Q55.4 3.1 62.9 8.1 Q67.1 0.4 71.3 6.7 Q72.9 1.2 74.6 7.5 Q78.4 2.9 82.1 8.1 Q87.0 0.3 91.9 6.7 Q95.3 -0.1 98.8 8.0 Q106.3 2.0 113.8 7.1 Q120.6 2.5 127.5 8.7 Q134.4 2.4 141.4 8.8 Q145.0 3.2 148.6 9.3 Q151.1 2.3 153.5 8.6 Q157.8 1.5 162.1 8.0 Q169.1 1.4 176.2 8.9 Q179.8 2.8 183.4 9.1 Q187.7 1.6 192.0 9.2 Q196.0 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 100%/200px 13px repeat-x,linear-gradient(#000 0 0) 0 50%/100% calc(100% - 24px) no-repeat}
 .couple .cmat .m2{position:absolute;inset:0;background:#FBF8F2;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='200'%3E%3Cpath transform='matrix%280 1 1 0 0 0%29' d='M0 13 L0 8 Q2.9 1.5 5.9 7.6 Q11.0 1.8 16.1 6.8 Q17.7 2.7 19.3 7.3 Q22.2 3.3 25.1 7.9 Q31.6 1.3 38.1 8.4 Q40.5 1.9 42.9 9.0 Q47.6 2.3 52.2 8.5 Q54.1 2.4 56.0 8.3 Q59.3 -0.5 62.6 9.0 Q66.9 2.2 71.3 9.1 Q77.0 3.0 82.8 7.7 Q89.1 1.1 95.4 9.2 Q102.2 -0.2 109.0 7.0 Q111.8 3.2 114.6 7.8 Q119.8 0.6 125.1 8.0 Q128.9 0.8 132.7 8.2 Q137.7 2.9 142.7 8.5 Q149.8 2.7 156.9 9.4 Q162.4 0.0 167.9 9.0 Q175.2 2.9 182.5 8.2 Q188.3 0.2 194.1 8.9 Q197.0 0.5 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/13px 200px repeat-y,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='200'%3E%3Cpath transform='matrix%280 1 -1 0 13 0%29' d='M0 13 L0 8 Q2.9 -0.2 5.8 7.7 Q8.3 -0.3 10.7 7.7 Q17.7 2.5 24.7 8.7 Q27.5 1.5 30.4 7.4 Q32.9 -0.2 35.4 7.2 Q42.5 2.6 49.6 8.9 Q55.9 0.2 62.2 7.5 Q67.4 2.3 72.7 9.0 Q79.5 -0.3 86.3 8.3 Q91.8 1.4 97.3 7.1 Q101.7 -0.3 106.0 9.2 Q112.7 1.5 119.4 7.4 Q126.3 1.6 133.3 9.1 Q139.9 1.4 146.5 7.8 Q151.6 1.1 156.7 7.1 Q160.0 2.6 163.3 6.7 Q165.1 1.8 166.9 7.4 Q171.6 1.2 176.3 7.6 Q183.8 0.2 191.3 7.8 Q194.0 1.9 196.7 7.4 Q198.3 2.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 100% 0/13px 200px repeat-y,linear-gradient(#000 0 0) 50% 0/calc(100% - 24px) 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='200'%3E%3Cpath transform='matrix%280 1 1 0 0 0%29' d='M0 13 L0 8 Q2.9 1.5 5.9 7.6 Q11.0 1.8 16.1 6.8 Q17.7 2.7 19.3 7.3 Q22.2 3.3 25.1 7.9 Q31.6 1.3 38.1 8.4 Q40.5 1.9 42.9 9.0 Q47.6 2.3 52.2 8.5 Q54.1 2.4 56.0 8.3 Q59.3 -0.5 62.6 9.0 Q66.9 2.2 71.3 9.1 Q77.0 3.0 82.8 7.7 Q89.1 1.1 95.4 9.2 Q102.2 -0.2 109.0 7.0 Q111.8 3.2 114.6 7.8 Q119.8 0.6 125.1 8.0 Q128.9 0.8 132.7 8.2 Q137.7 2.9 142.7 8.5 Q149.8 2.7 156.9 9.4 Q162.4 0.0 167.9 9.0 Q175.2 2.9 182.5 8.2 Q188.3 0.2 194.1 8.9 Q197.0 0.5 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/13px 200px repeat-y,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='200'%3E%3Cpath transform='matrix%280 1 -1 0 13 0%29' d='M0 13 L0 8 Q2.9 -0.2 5.8 7.7 Q8.3 -0.3 10.7 7.7 Q17.7 2.5 24.7 8.7 Q27.5 1.5 30.4 7.4 Q32.9 -0.2 35.4 7.2 Q42.5 2.6 49.6 8.9 Q55.9 0.2 62.2 7.5 Q67.4 2.3 72.7 9.0 Q79.5 -0.3 86.3 8.3 Q91.8 1.4 97.3 7.1 Q101.7 -0.3 106.0 9.2 Q112.7 1.5 119.4 7.4 Q126.3 1.6 133.3 9.1 Q139.9 1.4 146.5 7.8 Q151.6 1.1 156.7 7.1 Q160.0 2.6 163.3 6.7 Q165.1 1.8 166.9 7.4 Q171.6 1.2 176.3 7.6 Q183.8 0.2 191.3 7.8 Q194.0 1.9 196.7 7.4 Q198.3 2.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 100% 0/13px 200px repeat-y,linear-gradient(#000 0 0) 50% 0/calc(100% - 24px) 100% no-repeat}
-.couple .stick::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 55% at 50% 50%,rgba(255,238,232,.3),rgba(255,238,232,0) 70%),linear-gradient(90deg,rgba(40,12,18,.5),rgba(40,12,18,0) 26%,rgba(40,12,18,0) 74%,rgba(40,12,18,.5))}
+.couple .stick::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(40,12,18,.5),rgba(40,12,18,0) 26%,rgba(40,12,18,0) 74%,rgba(40,12,18,.5))}
 .couple .frame{position:absolute;inset:0;overflow:hidden;will-change:transform;transform-origin:50% 50%}
 .fin{position:absolute;inset:0;will-change:transform;transform-origin:50% 50%}
 .couple .frame img{width:100%;height:100%;object-fit:cover;will-change:transform}
@@ -293,7 +294,7 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
   <!-- 01 · COUPLE (like the reference: photo + big script names) -->
   <section class="couple" id="couple">
     <div class="stick">
-      <div class="cmat" id="cMat"><div class="m1"><div class="m2"></div></div></div>
+      <div class="cglow" id="cGlow"></div><div class="cmat" id="cMat"><div class="m1"><div class="m2"></div></div></div>
       <div class="frame" id="cFrame">
         <div class="fin" id="cIn">
           <img decoding="async" id="cImg" src="assets/img/kiss-cake.jpg" alt="Ngọc Phú và Lưu Tuyến" style="object-position:50% 30%">
@@ -343,7 +344,6 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
           <div class="yr caps">2026</div>
           <div class="mon">December</div>
           <div class="grid"><span class="h">T2</span><span class="h">T3</span><span class="h">T4</span><span class="h">T5</span><span class="h">T6</span><span class="h">T7</span><span class="h">CN</span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span class="mk" aria-label="Ngày cưới">18<svg viewBox="0 0 100 84" aria-hidden="true"><path id="calRing" pathLength="1" d="M58 8 C30 4 6 20 8 44 C10 68 40 80 62 74 C86 68 96 48 90 28 C85 14 70 6 50 9 C42 10 36 13 32 16"/><path class="hrt" id="calHeart" d="M86 4 c-3-5-10-3-9 3 c1 5 9 9 9 9 s8-4 9-9 c1-6-6-8-9-3z"/></svg></span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span></div>
-          <div class="note"><span class="caps">Thứ Sáu · 18 tháng 12 năm 2026 · 19:00</span><em>(Nhằm ngày 10 tháng 11 năm Bính Ngọ)</em></div>
         </div>
       </div>
     </div>
@@ -406,7 +406,7 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
 
   /* ---------- cached layout (read once, never during scroll) ---------- */
   var vw,vh,W0,H0,HEAD, L={};
-  var couple=$('couple'), cFrame=$('cFrame'), cIn=$('cIn'), cImg2=$('cImg2'), cW2=$('cImg2Wrap'), cTxt=$('cTxt'), cKick=$('cKick'), cN1=$('cN1'), cN2=$('cN2'), cAnd=$('cAnd'), cDate=$('cDate'), eL=$('eL'), eR=$('eR'), eB=$('eB'), cMat=$('cMat');
+  var couple=$('couple'), cFrame=$('cFrame'), cIn=$('cIn'), cImg2=$('cImg2'), cW2=$('cImg2Wrap'), cTxt=$('cTxt'), cKick=$('cKick'), cN1=$('cN1'), cN2=$('cN2'), cAnd=$('cAnd'), cDate=$('cDate'), eL=$('eL'), eR=$('eR'), eB=$('eB'), cMat=$('cMat'), cGlow=$('cGlow');
   var hb=$('heroBlur'), hs=$('heroSharp'), hv=$('heroVeil'), hf=$('heroFoot'), hWel=$('hWel'), hDate=$('hDate');
   var dS=$('date'), dBg=$('dBg'), dBeam=$('dBeam'), dSpot=$('dSpot'), dCal=$('dCal'), dCin=$('dCin'), calRing=$('calRing'), calHeart=$('calHeart');
   var zoom=$('zoom'), zPic=$('zPic'), zIn=$('zIn'), zA=$('zA'), zB=$('zB'), zK=$('zK');
@@ -464,10 +464,10 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
 
     /* couple: photo 1 + names -> photo 2 slides up -> names out -> frame shrinks */
     if(near(L.couple.top,L.couple.h,y)){
-      var cp=prog('couple',y);
+      var cp=prog('couple',y), cw=document.documentElement.clientWidth||vw;
       var sk=ease(seg(cp,.64,.9));
-      var mp=vw<820?24:Math.min(44,Math.max(30,vw*.028)), iy=HEAD+mp+16, ix=vw<820?30:Math.max(30+mp,vw*.16), ib=mp+26;
-      var sx=lerp(1,(vw-2*ix)/vw,sk), sy=lerp(1,(vh-iy-ib)/vh,sk), ty=lerp(0,(iy-ib)/2,sk);
+      var mp=cw<820?24:Math.min(44,Math.max(30,cw*.028)), iy=HEAD+mp+16, ix=cw<820?30:Math.max(30+mp,cw*.16), ib=mp+72, iy=HEAD+mp+40;
+      var sx=lerp(1,(cw-2*ix)/cw,sk), sy=lerp(1,(vh-iy-ib)/vh,sk), ty=lerp(0,(iy-ib)/2,sk);
       var m=Math.max(sx,sy), zk=lerp(1.22,1.02,eout(seg(cp,0,.9)));
       set(cFrame,'transform','translate3d(0,'+ty.toFixed(1)+'px,0) scale('+sx.toFixed(4)+','+sy.toFixed(4)+')');
       set(cIn,'transform','scale('+(m*zk/sx).toFixed(4)+','+(m*zk/sy).toFixed(4)+')');
@@ -482,8 +482,8 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
       set(cDate,'opacity',dd.toFixed(3)); set(cDate,'transform','translate3d(0,'+lerp(30,0,dd).toFixed(1)+'px,0)');
       var out=seg(cp,.6,.76);
       set(cTxt,'opacity',(1-out).toFixed(3)); set(cTxt,'transform','translate3d(0,'+(-out*14).toFixed(2)+'vh,0) scale('+lerp(1,.9,out).toFixed(4)+')');
-      set(cMat,'left',(ix-mp)+'px'); set(cMat,'top',(iy-mp)+'px'); set(cMat,'width',(vw-2*ix+2*mp)+'px'); set(cMat,'height',(vh-iy-ib+2*mp)+'px');
-      var mo=seg(cp,.78,.92); set(cMat,'opacity',mo.toFixed(3)); set(cMat,'transform','scale('+lerp(1.04,1,mo).toFixed(4)+')');
+      set(cMat,'left',(ix-mp)+'px'); set(cMat,'top',(iy-mp)+'px'); set(cMat,'width',(cw-2*ix+2*mp)+'px'); set(cGlow,'left',(ix-mp*3)+'px'); set(cGlow,'top',(iy-mp*2)+'px'); set(cGlow,'width',(cw-2*ix+6*mp)+'px'); set(cGlow,'height',(vh-iy-ib+4*mp)+'px'); set(cMat,'height',(vh-iy-ib+2*mp)+'px');
+      var mo=seg(cp,.78,.92); set(cMat,'opacity',mo.toFixed(3)); set(cGlow,'opacity',mo.toFixed(3)); set(cMat,'transform','scale('+lerp(1.04,1,mo).toFixed(4)+')');
       var eo=seg(cp,.84,.97).toFixed(3); set(eL,'opacity',eo); set(eR,'opacity',eo); set(eB,'opacity',eo);
     }
 
