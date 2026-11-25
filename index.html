@@ -700,7 +700,7 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
       if(!name){ err.textContent='Bạn điền tên người gửi nhé.'; f.name.focus(); return; }
       if(!msg){ err.textContent='Bạn viết vài dòng lời chúc nhé.'; f.msg.focus(); return; }
       var w={name:name,msg:msg,t:Date.now()}, all=load(); all.push(w); save(all);
-      if(FORM.action){ try{ var fd=new FormData(); fd.append(FORM.name,name); fd.append(FORM.msg,msg); fetch(FORM.action,{method:'POST',mode:'no-cors',body:fd}).catch(function(){}); }catch(x){} }
+      if(FORM.action){ try{ var body=encodeURIComponent(FORM.name)+'='+encodeURIComponent(name)+'&'+encodeURIComponent(FORM.msg)+'='+encodeURIComponent(msg); fetch(FORM.action,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body,keepalive:true}).catch(function(){ var i=new Image(); i.src=FORM.action+'?'+body+'&submit=Submit'; }); }catch(x){} }
       btn.disabled=true; btn.textContent='Đã gửi';
       out.appendChild(card(w)); f.msg.value='';
       setTimeout(function(){ btn.disabled=false; btn.textContent='Gửi lời chúc'; },1800);
