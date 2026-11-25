@@ -54,8 +54,8 @@ section{position:relative}
 
 /* ---------- header + logo ---------- */
 .header{position:fixed;inset:0 0 auto 0;height:var(--header);z-index:40;display:flex;align-items:center;justify-content:space-between;padding:0 var(--gutter);
-  color:var(--rose-deep);background:rgba(251,247,241,.42);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);
-  border-bottom:1px solid rgba(255,255,255,.35);box-shadow:0 8px 30px rgba(60,30,35,.06);opacity:0;transform:translateY(-100%);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+  color:#FBF4EA;background:rgba(28,21,22,.34);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);
+  border-bottom:1px solid rgba(255,255,255,.18);box-shadow:0 8px 30px rgba(0,0,0,.08);text-shadow:0 1px 8px rgba(0,0,0,.3);opacity:0;transform:translateY(-100%);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.7,.2,1);pointer-events:none}
 .header.on{opacity:1;transform:none;pointer-events:auto}
 .header .s{display:none}
 .logo{position:fixed;left:50%;top:50%;z-index:50;will-change:transform;transform-origin:50% 50%;cursor:pointer;-webkit-tap-highlight-color:transparent}
@@ -65,8 +65,8 @@ section{position:relative}
 .logo .anim{opacity:0}
 .logo.playing .anim{opacity:1}
 .logo.done .anim{opacity:0;transition:opacity .6s ease}
-.logo.dock .w{opacity:0}
-.logo.dock .r{opacity:1}
+.logo.dock .w{opacity:1}
+.logo.dock .r{opacity:0}
 
 /* ---------- reveal / slide in & out ---------- */
 .sl,.sr,.su,.fd{transition:transform 1.3s cubic-bezier(.16,.8,.2,1),opacity 1.1s ease}
@@ -115,6 +115,8 @@ section{position:relative}
 .couple .txt .caps{letter-spacing:.24em;font-size:clamp(12px,1.25vw,16px);line-height:1.7}
 .couple .txt #cKick{margin-bottom:clamp(18px,3vw,44px)}
 .couple .txt .names{font-size:clamp(72px,11vw,170px);line-height:1;will-change:transform}
+.couple .txt .nimg{display:block;width:min(90vw,860px);max-width:100%;height:auto;margin:0 auto;will-change:transform,opacity;filter:drop-shadow(0 2px 18px rgba(0,0,0,.25))}
+.couple .txt .nimg.amp{margin:.6vh auto}
 .couple .txt .and{font-family:var(--pinyon);font-size:clamp(34px,4.2vw,62px);line-height:1;margin:-.1em 0 -.05em}
 .couple .txt .cdate{margin-top:clamp(14px,2vw,26px)}
 .couple .edge{position:absolute;color:var(--rose-deep);opacity:0;will-change:opacity}
@@ -142,7 +144,7 @@ section{position:relative}
 /* ---------- 04 DATE : countdown over photo ---------- */
 section.date{position:relative;min-height:100svh;overflow:hidden;background:#141011;color:#FBF4EA;display:flex;align-items:center;justify-content:center;text-align:center;padding:calc(var(--header) + 40px) var(--gutter) 60px}
 .date .bgimg{position:absolute;inset:0;will-change:transform}
-.date .bgimg img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.55)}
+.date .bgimg img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.55);transform:rotate(180deg)}
 .date .shade{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(20,16,17,.25),rgba(20,16,17,.7))}
 .date .inner{position:relative}
 .date .forever{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(40px,5.4vw,78px);line-height:1.1;text-wrap:balance}
@@ -168,19 +170,19 @@ section.date{position:relative;min-height:100svh;overflow:hidden;background:#141
 
 /* ---------- 06 VENUE ---------- */
 .venue{background:#1b1415;text-align:center;color:#FBF4EA;padding:calc(var(--header) + 70px) var(--gutter) 100px;overflow:hidden;min-height:100svh;display:flex;align-items:center;justify-content:center}
-.venue .bg{position:absolute;inset:0;will-change:transform;transform-origin:30% 40%}
-.venue .bg img{width:100%;height:100%;object-fit:cover;object-position:25% 30%;filter:grayscale(1)}
-.venue .shade{position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 55% 55%,rgba(20,14,15,.72),rgba(20,14,15,.45) 70%,rgba(20,14,15,.6))}
+.venue .bg{position:absolute;inset:0;will-change:transform;transform-origin:50% 50%}
+.venue .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:grayscale(1)}
+.venue .shade{position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 55% 55%,rgba(16,13,12,.74),rgba(16,13,12,.6) 70%,rgba(16,13,12,.7))}
 .venue .inner{position:relative;max-width:980px;margin:0 auto;text-shadow:0 2px 24px rgba(0,0,0,.35)}
 .venue .lead{color:rgba(251,244,234,.85);font-size:clamp(16px,1.5vw,19px);line-height:1.6}
-.venue .nh{font-family:var(--pinyon);font-size:clamp(34px,3.8vw,52px);color:#F3D9DC;margin-top:22px;line-height:1.2}
+.venue .nh{font-family:var(--pinyon);font-size:clamp(34px,3.8vw,52px);color:#E6D3AE;margin-top:22px;line-height:1.2}
 .venue h2{font-family:var(--pinyon);font-weight:400;font-size:clamp(52px,7.4vw,112px);line-height:1.1;color:#FBF4EA}
-.venue .hall{font-size:clamp(24px,2.5vw,32px);margin-top:10px;color:#F3D9DC}
+.venue .hall{font-size:clamp(24px,2.5vw,32px);margin-top:10px;color:#E6D3AE}
 .venue .addr{color:rgba(251,244,234,.85);margin-top:4px;font-size:clamp(16px,1.6vw,20px)}
 .orn{width:120px;height:14px;margin:26px auto;color:var(--rose)}
-.venue .orn{color:#F3D9DC}
+.venue .orn{color:#E6D3AE}
 .venue .when .caps{display:block;color:#FBF4EA;font-size:clamp(14px,1.5vw,19px);letter-spacing:.14em}
-.venue .when .t{font-size:clamp(18px,1.8vw,22px);margin-bottom:8px;color:#F3D9DC}
+.venue .when .t{font-size:clamp(18px,1.8vw,22px);margin-bottom:8px;color:#E6D3AE}
 .venue .when em{color:rgba(251,244,234,.8)}
 .venue .btn{border-color:rgba(251,244,234,.8);color:#FBF4EA}
 .venue .btn:hover{background:#FBF4EA;color:var(--rose-deep)}
@@ -193,7 +195,7 @@ section.date{position:relative;min-height:100svh;overflow:hidden;background:#141
   body{font-size:17px}
   .header .f{display:none}.header .s{display:inline}
   .couple .edge.l,.couple .edge.r{display:none}
-  .couple .txt .names{font-size:16.5vw}
+  .couple .txt .nimg{width:100%}
   .pair .grid{display:block}
   .pair .q1{width:74%}
   .pair .q2{width:66%;margin:-14vh 0 0 auto}
@@ -202,7 +204,7 @@ section.date{position:relative;min-height:100svh;overflow:hidden;background:#141
   .moments figure:nth-child(odd){margin-left:0}.moments figure:nth-child(even){margin-right:0}
   .count i{display:none}
   .count{gap:20px}.count b{font-size:46px}
-  .venue .bg img{object-position:22% 30%}
+  .venue .bg img{object-position:42% 50%}
   .zoom .line.a{top:calc(var(--header) + 7vh)}.zoom .line.b{bottom:22vh}
 }
 </style>
@@ -247,9 +249,9 @@ section.date{position:relative;min-height:100svh;overflow:hidden;background:#141
       </div>
       <div class="txt" id="cTxt">
         <div class="caps" id="cKick">Trân trọng báo tin<br>Lễ Thành Hôn của</div>
-        <div class="names" id="cN1">Ngọc Phú</div>
-        <div class="and" id="cAnd">và</div>
-        <div class="names" id="cN2">Lưu Tuyến</div>
+        <img class="nimg" id="cN1" src="assets/names-n1.svg" alt="Ngọc Phú">
+        <img class="nimg amp" id="cAnd" src="assets/names-and.svg" alt="và">
+        <img class="nimg" id="cN2" src="assets/names-n2.svg" alt="Lưu Tuyến">
         <div class="caps cdate" id="cDate">Thứ Sáu · 18 tháng 12 năm 2026</div>
       </div>
       <div class="edge l tiny" id="eL">Út nam · Ngọc Phú</div>
@@ -309,7 +311,7 @@ section.date{position:relative;min-height:100svh;overflow:hidden;background:#141
 
   <!-- 06 · VENUE (fonts follow the printed card) -->
   <section class="venue io">
-    <div class="bg" data-dolly="1"><img decoding="async" src="assets/img/venue-bg.jpg" alt=""></div>
+    <div class="bg" data-dolly="1"><img decoding="async" src="assets/img/hands.jpg" alt=""></div>
     <div class="shade"></div>
     <div class="inner">
       <p class="lead su">Kính mời quý khách<br>Đến dự tiệc chung vui cùng gia đình chúng tôi tại</p>
