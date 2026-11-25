@@ -142,10 +142,10 @@ section{position:relative}
 .zoom .kick{position:absolute;left:0;right:0;bottom:4vh;text-align:center;color:#fff}
 
 /* ---------- 04 DATE : countdown over photo ---------- */
-section.date{position:relative;min-height:100svh;overflow:hidden;background:#141011;color:#FBF4EA;display:flex;align-items:center;justify-content:center;text-align:center;padding:calc(var(--header) + 40px) var(--gutter) 60px}
+section.date{position:relative;min-height:100svh;overflow:hidden;background:#141011;color:#FBF4EA;display:flex;align-items:flex-end;justify-content:center;text-align:center;padding:calc(var(--header) + 40px) var(--gutter) 11vh}
 .date .bgimg{position:absolute;inset:0;will-change:transform}
-.date .bgimg img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.55);transform:rotate(180deg)}
-.date .shade{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(20,16,17,.25),rgba(20,16,17,.7))}
+.date .bgimg img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:grayscale(1) brightness(.6)}
+.date .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,17,.1) 30%,rgba(20,16,17,.75))}
 .date .inner{position:relative}
 .date .forever{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(40px,5.4vw,78px);line-height:1.1;text-wrap:balance}
 .count{display:flex;justify-content:center;align-items:flex-start;gap:clamp(10px,2.4vw,30px);margin:clamp(14px,2vw,26px) 0 8px}
@@ -204,7 +204,7 @@ section.date{position:relative;min-height:100svh;overflow:hidden;background:#141
   .moments figure:nth-child(odd){margin-left:0}.moments figure:nth-child(even){margin-right:0}
   .count i{display:none}
   .count{gap:20px}.count b{font-size:46px}
-  .venue .bg img{object-position:42% 50%}
+  .venue .bg img{object-position:40% 50%}
   .zoom .line.a{top:calc(var(--header) + 7vh)}.zoom .line.b{bottom:22vh}
 }
 </style>
@@ -280,7 +280,7 @@ section.date{position:relative;min-height:100svh;overflow:hidden;background:#141
 
   <!-- 04 · DATE (countdown over photo) -->
   <section class="date io" id="date">
-    <div class="bgimg" data-dolly="1"><img decoding="async" src="assets/img/hands.jpg" alt=""></div>
+    <div class="bgimg" data-dolly="1"><img decoding="async" src="assets/img/countdown.jpg" alt=""></div>
     <div class="shade"></div>
     <div class="inner">
       <div class="forever su">Đếm ngược đến ngày vui</div>
@@ -311,7 +311,7 @@ section.date{position:relative;min-height:100svh;overflow:hidden;background:#141
 
   <!-- 06 · VENUE (fonts follow the printed card) -->
   <section class="venue io">
-    <div class="bg" data-dolly="1"><img decoding="async" src="assets/img/hands.jpg" alt=""></div>
+    <div class="bg" data-dolly="1"><img decoding="async" src="assets/img/armlink.jpg" alt=""></div>
     <div class="shade"></div>
     <div class="inner">
       <p class="lead su">Kính mời quý khách<br>Đến dự tiệc chung vui cùng gia đình chúng tôi tại</p>
