@@ -682,7 +682,7 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
 
   /* wishes: saved on this device only, shown blurred to the sender; optional Google Form forwarding */
   (function(){
-    var FORM={action:'',name:'',msg:''}; /* set to a Google Form formResponse URL + entry ids to forward wishes to the couple */
+    var FORM={action:'https://docs.google.com/forms/d/e/1FAIpQLScMsy9Jz8IK2Ea6yiQM3nVUqBPX6eUl6I5qX5e8r1_pnlvlsw/formResponse',name:'entry.1798735722',msg:'entry.1324948550'}; /* set to a Google Form formResponse URL + entry ids to forward wishes to the couple */
     var f=document.getElementById('wishForm'), out=document.getElementById('wSent'), err=document.getElementById('wErr'), btn=document.getElementById('wSend'); if(!f) return;
     var KEY='thiep-loi-chuc', LOCK='<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>';
     function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ return []; } }
