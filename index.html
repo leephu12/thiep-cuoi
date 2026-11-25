@@ -125,7 +125,7 @@ section{position:relative}
 .couple .edge.b{left:0;right:0;bottom:2.4vh;text-align:center}
 
 /* ---------- 02 PAIR : two staggered photos ---------- */
-.pair{background:#7A454C url(assets/deco/damask.jpg) 50% 0/211px 210px repeat;position:relative;padding:calc(var(--header) + 70px) var(--gutter) 140px;overflow:hidden}
+.pair{background:#A9757A url(assets/deco/damask2.jpg) 50% 0/250px 253px repeat;position:relative;padding:calc(var(--header) + 70px) var(--gutter) 140px;overflow:hidden}
 .pair .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(12px,2vw,28px);align-items:start}
 .pair figure{position:relative;will-change:transform;aspect-ratio:991/1400;margin:0}
 .pair .q1{grid-column:2 / span 5}
@@ -191,17 +191,17 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
 .date .when em{opacity:.85}
 
 /* ---------- 05 MOMENTS : equal photos, staggered left/right, slide in ---------- */
-.moments{background:#7A454C url(assets/deco/damask.jpg) 50% 0/211px 210px repeat;position:relative;padding:calc(var(--header) + 60px) var(--gutter) 140px;overflow:hidden}
+.moments{background:#A9757A url(assets/deco/damask2.jpg) 50% 0/250px 253px repeat;position:relative;padding:calc(var(--header) + 60px) var(--gutter) 140px;overflow:hidden}
 .moments .list{max-width:1100px;margin:0 auto;display:flex;flex-direction:column}
 .moments figure{width:min(40%,440px);aspect-ratio:4/5;position:relative}
 .moments figure+figure{margin-top:-14vh}
 .moments figure:nth-child(odd){align-self:flex-start;margin-left:6%}
 .moments figure:nth-child(even){align-self:flex-end;margin-right:6%}
 .moments figure>.zoomwrap{width:100%;height:100%}
-.mat{padding:clamp(8px,1vw,14px);background:#FFFCF6;box-shadow:0 22px 44px -26px rgba(60,40,30,.45),0 0 0 1px rgba(142,90,98,.12)}
+.mat{padding:clamp(18px,2vw,28px);background:#FBF6EC;box-shadow:0 22px 44px -26px rgba(60,40,30,.45),0 0 0 1px rgba(142,90,98,.12)}
 .mat .ph{position:relative;width:100%;height:100%;overflow:hidden}
 .mat .ph img{width:100%;height:100%;object-fit:cover}
-.mat::after{content:"";position:absolute;inset:clamp(4px,.45vw,7px);border:1px solid rgba(176,140,90,.55);pointer-events:none}
+.mat::after{content:"";position:absolute;inset:clamp(6px,.7vw,10px);pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath d='M0 2.6q3.5-2.6 7 0t7 0M0 5.4q3.5-2.6 7 0t7 0' fill='none' stroke='%238E5A62' stroke-width='.8'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath d='M0 2.6q3.5-2.6 7 0t7 0M0 5.4q3.5-2.6 7 0t7 0' fill='none' stroke='%238E5A62' stroke-width='.8'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 8 14'%3E%3Cpath d='M2.6 0q-2.6 3.5 0 7t0 7M5.4 0q-2.6 3.5 0 7t0 7' fill='none' stroke='%238E5A62' stroke-width='.8'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 8 14'%3E%3Cpath d='M2.6 0q-2.6 3.5 0 7t0 7M5.4 0q-2.6 3.5 0 7t0 7' fill='none' stroke='%238E5A62' stroke-width='.8'/%3E%3C/svg%3E");background-position:0 0,0 100%,0 0,100% 0;background-size:14px 8px,14px 8px,8px 14px,8px 14px;background-repeat:round no-repeat,round no-repeat,no-repeat round,no-repeat round}
 .moments .divider{margin:0 auto clamp(50px,9vh,110px)}
 .moments .divider.end{margin:clamp(60px,10vh,120px) auto 0}
 .moments figure .tiny{position:absolute;bottom:-26px;color:var(--muted)}
