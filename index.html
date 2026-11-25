@@ -105,8 +105,10 @@ section{position:relative}
 
 /* ---------- 01 COUPLE : photo big -> small, names slide in ---------- */
 .couple{height:360vh;background-color:#BC8E90;background-image:radial-gradient(circle,rgba(255,236,236,.34) 1.6px,transparent 2.2px),radial-gradient(circle,rgba(255,236,236,.34) 1.6px,transparent 2.2px);background-size:22px 22px;background-position:0 0,11px 11px}
-.couple .cmat{position:absolute;left:0;top:0;opacity:0;pointer-events:none;--r:clamp(9px,.9vw,13px);background:#FBF6EC;-webkit-mask:radial-gradient(var(--r) at 50% var(--r),#000 96%,#0000) 0 0/calc(2*var(--r)) calc(2*var(--r)) round no-repeat,radial-gradient(var(--r) at 50% var(--r),#000 96%,#0000) 0 100%/calc(2*var(--r)) calc(2*var(--r)) round no-repeat,radial-gradient(var(--r) at var(--r) 50%,#000 96%,#0000) 0 0/calc(2*var(--r)) calc(2*var(--r)) no-repeat round,radial-gradient(var(--r) at var(--r) 50%,#000 96%,#0000) 100% 0/calc(2*var(--r)) calc(2*var(--r)) no-repeat round,linear-gradient(#000 0 0) 50% 50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)) no-repeat;mask:radial-gradient(var(--r) at 50% var(--r),#000 96%,#0000) 0 0/calc(2*var(--r)) calc(2*var(--r)) round no-repeat,radial-gradient(var(--r) at 50% var(--r),#000 96%,#0000) 0 100%/calc(2*var(--r)) calc(2*var(--r)) round no-repeat,radial-gradient(var(--r) at var(--r) 50%,#000 96%,#0000) 0 0/calc(2*var(--r)) calc(2*var(--r)) no-repeat round,radial-gradient(var(--r) at var(--r) 50%,#000 96%,#0000) 100% 0/calc(2*var(--r)) calc(2*var(--r)) no-repeat round,linear-gradient(#000 0 0) 50% 50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)) no-repeat}
-.couple .cmat::after{content:"";position:absolute;inset:calc(var(--r)*2.1);pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath d='M0 2.6q3.5-2.6 7 0t7 0M0 5.4q3.5-2.6 7 0t7 0' fill='none' stroke='%238E5A62' stroke-width='.8'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath d='M0 2.6q3.5-2.6 7 0t7 0M0 5.4q3.5-2.6 7 0t7 0' fill='none' stroke='%238E5A62' stroke-width='.8'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 8 14'%3E%3Cpath d='M2.6 0q-2.6 3.5 0 7t0 7M5.4 0q-2.6 3.5 0 7t0 7' fill='none' stroke='%238E5A62' stroke-width='.8'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 8 14'%3E%3Cpath d='M2.6 0q-2.6 3.5 0 7t0 7M5.4 0q-2.6 3.5 0 7t0 7' fill='none' stroke='%238E5A62' stroke-width='.8'/%3E%3C/svg%3E");background-position:0 0,0 100%,0 0,100% 0;background-size:14px 8px,14px 8px,8px 14px,8px 14px;background-repeat:round no-repeat,round no-repeat,no-repeat round,no-repeat round}
+.couple .cmat{position:absolute;left:0;top:0;opacity:0;pointer-events:none;filter:drop-shadow(0 18px 26px rgba(45,12,20,.45))}
+.couple .cmat .m1{position:absolute;inset:0;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath d='M0 13 L0 8 Q2.3 2.7 4.6 8.7 Q7.6 1.3 10.7 7.9 Q16.1 2.5 21.5 6.9 Q23.2 2.7 24.8 7.8 Q30.9 -0.6 37.0 7.8 Q42.8 0.3 48.6 9.2 Q55.5 -0.5 62.5 6.7 Q67.2 3.1 72.0 7.7 Q74.8 1.0 77.6 6.7 Q80.4 1.1 83.2 8.0 Q86.1 0.3 89.0 7.2 Q93.3 0.5 97.5 6.7 Q104.0 1.6 110.6 8.4 Q113.2 3.3 115.8 9.0 Q118.0 0.7 120.3 8.6 Q126.0 3.1 131.8 7.8 Q138.3 2.0 144.8 7.4 Q149.8 2.8 154.8 9.0 Q159.3 1.7 163.9 6.7 Q166.8 2.5 169.8 7.8 Q172.3 1.5 174.9 8.6 Q180.4 0.9 185.9 7.8 Q190.5 2.4 195.0 8.1 Q197.5 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/200px 13px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath transform='matrix%281 0 0 -1 0 13%29' d='M0 13 L0 8 Q7.2 3.1 14.5 6.8 Q16.5 2.7 18.5 8.7 Q24.0 0.6 29.5 8.3 Q34.7 1.7 39.8 7.0 Q43.9 0.9 48.0 8.6 Q55.4 3.1 62.9 8.1 Q67.1 0.4 71.3 6.7 Q72.9 1.2 74.6 7.5 Q78.4 2.9 82.1 8.1 Q87.0 0.3 91.9 6.7 Q95.3 -0.1 98.8 8.0 Q106.3 2.0 113.8 7.1 Q120.6 2.5 127.5 8.7 Q134.4 2.4 141.4 8.8 Q145.0 3.2 148.6 9.3 Q151.1 2.3 153.5 8.6 Q157.8 1.5 162.1 8.0 Q169.1 1.4 176.2 8.9 Q179.8 2.8 183.4 9.1 Q187.7 1.6 192.0 9.2 Q196.0 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 100%/200px 13px repeat-x,linear-gradient(#000 0 0) 0 50%/100% calc(100% - 24px) no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath d='M0 13 L0 8 Q2.3 2.7 4.6 8.7 Q7.6 1.3 10.7 7.9 Q16.1 2.5 21.5 6.9 Q23.2 2.7 24.8 7.8 Q30.9 -0.6 37.0 7.8 Q42.8 0.3 48.6 9.2 Q55.5 -0.5 62.5 6.7 Q67.2 3.1 72.0 7.7 Q74.8 1.0 77.6 6.7 Q80.4 1.1 83.2 8.0 Q86.1 0.3 89.0 7.2 Q93.3 0.5 97.5 6.7 Q104.0 1.6 110.6 8.4 Q113.2 3.3 115.8 9.0 Q118.0 0.7 120.3 8.6 Q126.0 3.1 131.8 7.8 Q138.3 2.0 144.8 7.4 Q149.8 2.8 154.8 9.0 Q159.3 1.7 163.9 6.7 Q166.8 2.5 169.8 7.8 Q172.3 1.5 174.9 8.6 Q180.4 0.9 185.9 7.8 Q190.5 2.4 195.0 8.1 Q197.5 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/200px 13px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath transform='matrix%281 0 0 -1 0 13%29' d='M0 13 L0 8 Q7.2 3.1 14.5 6.8 Q16.5 2.7 18.5 8.7 Q24.0 0.6 29.5 8.3 Q34.7 1.7 39.8 7.0 Q43.9 0.9 48.0 8.6 Q55.4 3.1 62.9 8.1 Q67.1 0.4 71.3 6.7 Q72.9 1.2 74.6 7.5 Q78.4 2.9 82.1 8.1 Q87.0 0.3 91.9 6.7 Q95.3 -0.1 98.8 8.0 Q106.3 2.0 113.8 7.1 Q120.6 2.5 127.5 8.7 Q134.4 2.4 141.4 8.8 Q145.0 3.2 148.6 9.3 Q151.1 2.3 153.5 8.6 Q157.8 1.5 162.1 8.0 Q169.1 1.4 176.2 8.9 Q179.8 2.8 183.4 9.1 Q187.7 1.6 192.0 9.2 Q196.0 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 100%/200px 13px repeat-x,linear-gradient(#000 0 0) 0 50%/100% calc(100% - 24px) no-repeat}
+.couple .cmat .m2{position:absolute;inset:0;background:#FBF8F2;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='200'%3E%3Cpath transform='matrix%280 1 1 0 0 0%29' d='M0 13 L0 8 Q2.9 1.5 5.9 7.6 Q11.0 1.8 16.1 6.8 Q17.7 2.7 19.3 7.3 Q22.2 3.3 25.1 7.9 Q31.6 1.3 38.1 8.4 Q40.5 1.9 42.9 9.0 Q47.6 2.3 52.2 8.5 Q54.1 2.4 56.0 8.3 Q59.3 -0.5 62.6 9.0 Q66.9 2.2 71.3 9.1 Q77.0 3.0 82.8 7.7 Q89.1 1.1 95.4 9.2 Q102.2 -0.2 109.0 7.0 Q111.8 3.2 114.6 7.8 Q119.8 0.6 125.1 8.0 Q128.9 0.8 132.7 8.2 Q137.7 2.9 142.7 8.5 Q149.8 2.7 156.9 9.4 Q162.4 0.0 167.9 9.0 Q175.2 2.9 182.5 8.2 Q188.3 0.2 194.1 8.9 Q197.0 0.5 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/13px 200px repeat-y,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='200'%3E%3Cpath transform='matrix%280 1 -1 0 13 0%29' d='M0 13 L0 8 Q2.9 -0.2 5.8 7.7 Q8.3 -0.3 10.7 7.7 Q17.7 2.5 24.7 8.7 Q27.5 1.5 30.4 7.4 Q32.9 -0.2 35.4 7.2 Q42.5 2.6 49.6 8.9 Q55.9 0.2 62.2 7.5 Q67.4 2.3 72.7 9.0 Q79.5 -0.3 86.3 8.3 Q91.8 1.4 97.3 7.1 Q101.7 -0.3 106.0 9.2 Q112.7 1.5 119.4 7.4 Q126.3 1.6 133.3 9.1 Q139.9 1.4 146.5 7.8 Q151.6 1.1 156.7 7.1 Q160.0 2.6 163.3 6.7 Q165.1 1.8 166.9 7.4 Q171.6 1.2 176.3 7.6 Q183.8 0.2 191.3 7.8 Q194.0 1.9 196.7 7.4 Q198.3 2.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 100% 0/13px 200px repeat-y,linear-gradient(#000 0 0) 50% 0/calc(100% - 24px) 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='200'%3E%3Cpath transform='matrix%280 1 1 0 0 0%29' d='M0 13 L0 8 Q2.9 1.5 5.9 7.6 Q11.0 1.8 16.1 6.8 Q17.7 2.7 19.3 7.3 Q22.2 3.3 25.1 7.9 Q31.6 1.3 38.1 8.4 Q40.5 1.9 42.9 9.0 Q47.6 2.3 52.2 8.5 Q54.1 2.4 56.0 8.3 Q59.3 -0.5 62.6 9.0 Q66.9 2.2 71.3 9.1 Q77.0 3.0 82.8 7.7 Q89.1 1.1 95.4 9.2 Q102.2 -0.2 109.0 7.0 Q111.8 3.2 114.6 7.8 Q119.8 0.6 125.1 8.0 Q128.9 0.8 132.7 8.2 Q137.7 2.9 142.7 8.5 Q149.8 2.7 156.9 9.4 Q162.4 0.0 167.9 9.0 Q175.2 2.9 182.5 8.2 Q188.3 0.2 194.1 8.9 Q197.0 0.5 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/13px 200px repeat-y,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='200'%3E%3Cpath transform='matrix%280 1 -1 0 13 0%29' d='M0 13 L0 8 Q2.9 -0.2 5.8 7.7 Q8.3 -0.3 10.7 7.7 Q17.7 2.5 24.7 8.7 Q27.5 1.5 30.4 7.4 Q32.9 -0.2 35.4 7.2 Q42.5 2.6 49.6 8.9 Q55.9 0.2 62.2 7.5 Q67.4 2.3 72.7 9.0 Q79.5 -0.3 86.3 8.3 Q91.8 1.4 97.3 7.1 Q101.7 -0.3 106.0 9.2 Q112.7 1.5 119.4 7.4 Q126.3 1.6 133.3 9.1 Q139.9 1.4 146.5 7.8 Q151.6 1.1 156.7 7.1 Q160.0 2.6 163.3 6.7 Q165.1 1.8 166.9 7.4 Q171.6 1.2 176.3 7.6 Q183.8 0.2 191.3 7.8 Q194.0 1.9 196.7 7.4 Q198.3 2.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 100% 0/13px 200px repeat-y,linear-gradient(#000 0 0) 50% 0/calc(100% - 24px) 100% no-repeat}
+.couple .stick::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 62% 58% at 50% 50%,rgba(255,238,232,.34),rgba(255,238,232,0) 60%),radial-gradient(ellipse 85% 85% at 50% 50%,rgba(40,12,18,0) 50%,rgba(40,12,18,.5))}
 .couple .frame{position:absolute;inset:0;overflow:hidden;will-change:transform;transform-origin:50% 50%}
 .fin{position:absolute;inset:0;will-change:transform;transform-origin:50% 50%}
 .couple .frame img{width:100%;height:100%;object-fit:cover;will-change:transform}
@@ -120,7 +122,7 @@ section{position:relative}
 .couple .txt .nimg{display:block;width:min(90vw,860px);max-width:100%;height:auto;margin:0 auto;will-change:transform,opacity;filter:drop-shadow(0 2px 18px rgba(0,0,0,.25))}
 .couple .txt .nimg.amp{margin:.6vh auto}
 .couple .txt .and{font-family:var(--pinyon);font-size:clamp(34px,4.2vw,62px);line-height:1;margin:-.1em 0 -.05em}
-.couple .txt .cdate{margin-top:clamp(14px,2vw,26px)}
+.couple .txt .cdate,.couple .edge.b{display:none}
 .couple .edge{position:absolute;color:#FBF4EA;text-shadow:0 1px 8px rgba(80,40,45,.45);opacity:0;will-change:opacity}
 .couple .edge.l{left:calc(var(--gutter) - 2px);top:50%;writing-mode:vertical-rl;transform:translateY(-50%) rotate(180deg)}
 .couple .edge.r{right:calc(var(--gutter) - 2px);top:50%;writing-mode:vertical-rl;transform:translateY(-50%)}
@@ -128,7 +130,12 @@ section{position:relative}
 
 /* ---------- 02 PAIR : two staggered photos ---------- */
 .pair{background-color:#BC8E90;background-image:radial-gradient(circle,rgba(255,236,236,.34) 1.6px,transparent 2.2px),radial-gradient(circle,rgba(255,236,236,.34) 1.6px,transparent 2.2px);background-size:22px 22px;background-position:0 0,11px 11px;position:relative;padding:calc(var(--header) + 70px) var(--gutter) 140px;overflow:hidden}
-.pair .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(12px,2vw,28px);align-items:start}
+.pair::before,.moments::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(40,12,18,.5),rgba(40,12,18,0) 26%,rgba(40,12,18,0) 74%,rgba(40,12,18,.5)),linear-gradient(180deg,rgba(40,12,18,.35),rgba(40,12,18,0) 12%,rgba(40,12,18,0) 88%,rgba(40,12,18,.35))}
+.pair figure::before,.moments figure::before{content:"";position:absolute;inset:-22% -26%;z-index:-1;pointer-events:none;background:radial-gradient(closest-side,rgba(255,238,232,.5),rgba(255,238,232,.16) 55%,rgba(255,238,232,0))}
+.moments figure{isolation:isolate}.moments figure .mat{filter:none}
+.moments figure .shd{position:absolute;left:5%;right:5%;top:8%;bottom:-3%;z-index:-1;background:rgba(45,12,20,.5);filter:blur(20px);border-radius:6px}
+.pair figure .fr{filter:drop-shadow(0 14px 18px rgba(45,12,20,.4))}
+.pair .grid{position:relative;display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(12px,2vw,28px);align-items:start}
 .pair figure{position:relative;will-change:transform;aspect-ratio:991/1400;margin:0}
 .pair .q1{grid-column:2 / span 5}
 .pair .q2{grid-column:7 / span 5;margin-top:22vh}
@@ -156,7 +163,7 @@ section{position:relative}
 .zoom .kick{position:absolute;left:0;right:0;bottom:4vh;text-align:center;color:#fff}
 
 /* ---------- 04 DATE : countdown over photo ---------- */
-section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;text-align:center}
+section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;text-align:center}
 .date .stick{display:flex;align-items:flex-end;justify-content:center;padding:calc(var(--header) + 40px) var(--gutter) 10vh}
 .date .bgimg{position:absolute;inset:0;will-change:transform;transform-origin:50% 35%}
 .date .bgimg img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;filter:grayscale(1) sepia(.18) brightness(.85) contrast(1.05)}
@@ -166,12 +173,6 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
 .date .spot{position:absolute;inset:-70%;background:radial-gradient(ellipse 19% 26% at 50% 46%,rgba(9,7,7,0) 0%,rgba(9,7,7,.08) 40%,rgba(9,7,7,.7) 72%,rgba(9,7,7,.97) 100%);transform:scale(.18);will-change:transform}
 .date .beam{position:absolute;left:50%;top:-8%;width:min(90vw,1100px);height:105%;transform:translateX(-50%);mix-blend-mode:screen;opacity:0;pointer-events:none}
 .date .beam::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 34% 105% at 50% 0,rgba(255,238,214,.3),rgba(255,238,214,.1) 55%,rgba(255,238,214,0) 80%)}
-.date .curtain{position:absolute;top:0;bottom:0;width:52%;pointer-events:none;z-index:2;will-change:transform;box-shadow:0 0 60px rgba(0,0,0,.7);
-  background:linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,0) 30%,rgba(0,0,0,0) 70%,rgba(0,0,0,.4)),repeating-linear-gradient(90deg,#140e0f 0,#2b2022 1.3vw,#4a3a3c 2.2vw,#2b2022 3.1vw,#140e0f 4.4vw)}
-.date .curtain.l{left:0}.date .curtain.r{right:0}
-.date .curtain::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent)}
-.date .valance{position:absolute;left:0;right:0;top:var(--header);height:clamp(44px,7vh,76px);z-index:3;pointer-events:none;
-  background:radial-gradient(ellipse 50% 100% at 50% 0,#3a2b2d 0,#1d1416 70%) 0 0/clamp(120px,16vw,220px) 100% repeat-x;box-shadow:0 10px 30px rgba(0,0,0,.6)}
 .date .inner{position:relative;z-index:4;text-shadow:0 2px 20px rgba(0,0,0,.6);will-change:opacity,transform;opacity:0}
 .date .forever{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(40px,5.4vw,78px);line-height:1.1;text-wrap:balance}
 .count{display:flex;justify-content:center;align-items:flex-start;gap:clamp(10px,2.4vw,30px);margin:clamp(14px,2vw,26px) 0 8px}
@@ -179,7 +180,7 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
 .count b{display:block;font-family:var(--num);font-weight:400;font-size:clamp(46px,7vw,104px);line-height:1;font-variant-numeric:lining-nums tabular-nums;letter-spacing:.02em}
 .count i{font-family:var(--num);font-style:normal;font-weight:400;font-size:clamp(40px,6vw,90px);line-height:1;opacity:.7}
 .count .tiny{opacity:.8;margin-top:10px;display:block;font-size:10px}
-.date .cal{position:absolute;inset:0;z-index:5;background:#4E1E24;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(var(--header) + 3vh) var(--gutter) 5vh;clip-path:inset(100% 0 0 0);will-change:clip-path}
+.date .cal{position:absolute;inset:0;z-index:5;background:radial-gradient(ellipse 70% 75% at 50% 52%,rgba(78,30,36,.74),rgba(58,20,26,.9));opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(var(--header) + 3vh) var(--gutter) 5vh;will-change:opacity}
 .cal .cin{width:min(640px,100%);will-change:transform,opacity}
 .cal .yr{letter-spacing:.4em;font-size:clamp(11px,1vw,13px);opacity:.75}
 .cal .mon{font-family:var(--pinyon);font-size:clamp(64px,8vw,112px);line-height:1.15;margin:0 0 clamp(14px,3vh,34px)}
@@ -196,15 +197,15 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
 
 /* ---------- 05 MOMENTS : equal photos, staggered left/right, slide in ---------- */
 .moments{background-color:#BC8E90;background-image:radial-gradient(circle,rgba(255,236,236,.34) 1.6px,transparent 2.2px),radial-gradient(circle,rgba(255,236,236,.34) 1.6px,transparent 2.2px);background-size:22px 22px;background-position:0 0,11px 11px;position:relative;padding:calc(var(--header) + 60px) var(--gutter) 140px;overflow:hidden}
-.moments .list{max-width:1100px;margin:0 auto;display:flex;flex-direction:column}
+.moments .list{position:relative;max-width:1100px;margin:0 auto;display:flex;flex-direction:column}
 .moments figure{width:min(40%,440px);aspect-ratio:4/5;position:relative}
 .moments figure+figure{margin-top:-14vh}
 .moments figure:nth-child(odd){align-self:flex-start;margin-left:6%}
 .moments figure:nth-child(even){align-self:flex-end;margin-right:6%}
-.moments figure>.zoomwrap{width:100%;height:100%}
+.moments figure .zoomwrap{width:100%;height:100%}
 
 .mat{padding:clamp(16px,1.9vw,26px);background:#FBF8F2;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='200'%3E%3Cpath transform='matrix%280 1 1 0 0 0%29' d='M0 13 L0 8 Q2.9 1.5 5.9 7.6 Q11.0 1.8 16.1 6.8 Q17.7 2.7 19.3 7.3 Q22.2 3.3 25.1 7.9 Q31.6 1.3 38.1 8.4 Q40.5 1.9 42.9 9.0 Q47.6 2.3 52.2 8.5 Q54.1 2.4 56.0 8.3 Q59.3 -0.5 62.6 9.0 Q66.9 2.2 71.3 9.1 Q77.0 3.0 82.8 7.7 Q89.1 1.1 95.4 9.2 Q102.2 -0.2 109.0 7.0 Q111.8 3.2 114.6 7.8 Q119.8 0.6 125.1 8.0 Q128.9 0.8 132.7 8.2 Q137.7 2.9 142.7 8.5 Q149.8 2.7 156.9 9.4 Q162.4 0.0 167.9 9.0 Q175.2 2.9 182.5 8.2 Q188.3 0.2 194.1 8.9 Q197.0 0.5 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/13px 200px repeat-y,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='200'%3E%3Cpath transform='matrix%280 1 -1 0 13 0%29' d='M0 13 L0 8 Q2.9 -0.2 5.8 7.7 Q8.3 -0.3 10.7 7.7 Q17.7 2.5 24.7 8.7 Q27.5 1.5 30.4 7.4 Q32.9 -0.2 35.4 7.2 Q42.5 2.6 49.6 8.9 Q55.9 0.2 62.2 7.5 Q67.4 2.3 72.7 9.0 Q79.5 -0.3 86.3 8.3 Q91.8 1.4 97.3 7.1 Q101.7 -0.3 106.0 9.2 Q112.7 1.5 119.4 7.4 Q126.3 1.6 133.3 9.1 Q139.9 1.4 146.5 7.8 Q151.6 1.1 156.7 7.1 Q160.0 2.6 163.3 6.7 Q165.1 1.8 166.9 7.4 Q171.6 1.2 176.3 7.6 Q183.8 0.2 191.3 7.8 Q194.0 1.9 196.7 7.4 Q198.3 2.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 100% 0/13px 200px repeat-y,linear-gradient(#000 0 0) 50% 0/calc(100% - 24px) 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='200'%3E%3Cpath transform='matrix%280 1 1 0 0 0%29' d='M0 13 L0 8 Q2.9 1.5 5.9 7.6 Q11.0 1.8 16.1 6.8 Q17.7 2.7 19.3 7.3 Q22.2 3.3 25.1 7.9 Q31.6 1.3 38.1 8.4 Q40.5 1.9 42.9 9.0 Q47.6 2.3 52.2 8.5 Q54.1 2.4 56.0 8.3 Q59.3 -0.5 62.6 9.0 Q66.9 2.2 71.3 9.1 Q77.0 3.0 82.8 7.7 Q89.1 1.1 95.4 9.2 Q102.2 -0.2 109.0 7.0 Q111.8 3.2 114.6 7.8 Q119.8 0.6 125.1 8.0 Q128.9 0.8 132.7 8.2 Q137.7 2.9 142.7 8.5 Q149.8 2.7 156.9 9.4 Q162.4 0.0 167.9 9.0 Q175.2 2.9 182.5 8.2 Q188.3 0.2 194.1 8.9 Q197.0 0.5 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/13px 200px repeat-y,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='200'%3E%3Cpath transform='matrix%280 1 -1 0 13 0%29' d='M0 13 L0 8 Q2.9 -0.2 5.8 7.7 Q8.3 -0.3 10.7 7.7 Q17.7 2.5 24.7 8.7 Q27.5 1.5 30.4 7.4 Q32.9 -0.2 35.4 7.2 Q42.5 2.6 49.6 8.9 Q55.9 0.2 62.2 7.5 Q67.4 2.3 72.7 9.0 Q79.5 -0.3 86.3 8.3 Q91.8 1.4 97.3 7.1 Q101.7 -0.3 106.0 9.2 Q112.7 1.5 119.4 7.4 Q126.3 1.6 133.3 9.1 Q139.9 1.4 146.5 7.8 Q151.6 1.1 156.7 7.1 Q160.0 2.6 163.3 6.7 Q165.1 1.8 166.9 7.4 Q171.6 1.2 176.3 7.6 Q183.8 0.2 191.3 7.8 Q194.0 1.9 196.7 7.4 Q198.3 2.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 100% 0/13px 200px repeat-y,linear-gradient(#000 0 0) 50% 0/calc(100% - 24px) 100% no-repeat}
-.moments figure{-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath d='M0 13 L0 8 Q2.3 2.7 4.6 8.7 Q7.6 1.3 10.7 7.9 Q16.1 2.5 21.5 6.9 Q23.2 2.7 24.8 7.8 Q30.9 -0.6 37.0 7.8 Q42.8 0.3 48.6 9.2 Q55.5 -0.5 62.5 6.7 Q67.2 3.1 72.0 7.7 Q74.8 1.0 77.6 6.7 Q80.4 1.1 83.2 8.0 Q86.1 0.3 89.0 7.2 Q93.3 0.5 97.5 6.7 Q104.0 1.6 110.6 8.4 Q113.2 3.3 115.8 9.0 Q118.0 0.7 120.3 8.6 Q126.0 3.1 131.8 7.8 Q138.3 2.0 144.8 7.4 Q149.8 2.8 154.8 9.0 Q159.3 1.7 163.9 6.7 Q166.8 2.5 169.8 7.8 Q172.3 1.5 174.9 8.6 Q180.4 0.9 185.9 7.8 Q190.5 2.4 195.0 8.1 Q197.5 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/200px 13px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath transform='matrix%281 0 0 -1 0 13%29' d='M0 13 L0 8 Q7.2 3.1 14.5 6.8 Q16.5 2.7 18.5 8.7 Q24.0 0.6 29.5 8.3 Q34.7 1.7 39.8 7.0 Q43.9 0.9 48.0 8.6 Q55.4 3.1 62.9 8.1 Q67.1 0.4 71.3 6.7 Q72.9 1.2 74.6 7.5 Q78.4 2.9 82.1 8.1 Q87.0 0.3 91.9 6.7 Q95.3 -0.1 98.8 8.0 Q106.3 2.0 113.8 7.1 Q120.6 2.5 127.5 8.7 Q134.4 2.4 141.4 8.8 Q145.0 3.2 148.6 9.3 Q151.1 2.3 153.5 8.6 Q157.8 1.5 162.1 8.0 Q169.1 1.4 176.2 8.9 Q179.8 2.8 183.4 9.1 Q187.7 1.6 192.0 9.2 Q196.0 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 100%/200px 13px repeat-x,linear-gradient(#000 0 0) 0 50%/100% calc(100% - 24px) no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath d='M0 13 L0 8 Q2.3 2.7 4.6 8.7 Q7.6 1.3 10.7 7.9 Q16.1 2.5 21.5 6.9 Q23.2 2.7 24.8 7.8 Q30.9 -0.6 37.0 7.8 Q42.8 0.3 48.6 9.2 Q55.5 -0.5 62.5 6.7 Q67.2 3.1 72.0 7.7 Q74.8 1.0 77.6 6.7 Q80.4 1.1 83.2 8.0 Q86.1 0.3 89.0 7.2 Q93.3 0.5 97.5 6.7 Q104.0 1.6 110.6 8.4 Q113.2 3.3 115.8 9.0 Q118.0 0.7 120.3 8.6 Q126.0 3.1 131.8 7.8 Q138.3 2.0 144.8 7.4 Q149.8 2.8 154.8 9.0 Q159.3 1.7 163.9 6.7 Q166.8 2.5 169.8 7.8 Q172.3 1.5 174.9 8.6 Q180.4 0.9 185.9 7.8 Q190.5 2.4 195.0 8.1 Q197.5 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/200px 13px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath transform='matrix%281 0 0 -1 0 13%29' d='M0 13 L0 8 Q7.2 3.1 14.5 6.8 Q16.5 2.7 18.5 8.7 Q24.0 0.6 29.5 8.3 Q34.7 1.7 39.8 7.0 Q43.9 0.9 48.0 8.6 Q55.4 3.1 62.9 8.1 Q67.1 0.4 71.3 6.7 Q72.9 1.2 74.6 7.5 Q78.4 2.9 82.1 8.1 Q87.0 0.3 91.9 6.7 Q95.3 -0.1 98.8 8.0 Q106.3 2.0 113.8 7.1 Q120.6 2.5 127.5 8.7 Q134.4 2.4 141.4 8.8 Q145.0 3.2 148.6 9.3 Q151.1 2.3 153.5 8.6 Q157.8 1.5 162.1 8.0 Q169.1 1.4 176.2 8.9 Q179.8 2.8 183.4 9.1 Q187.7 1.6 192.0 9.2 Q196.0 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 100%/200px 13px repeat-x,linear-gradient(#000 0 0) 0 50%/100% calc(100% - 24px) no-repeat}
+.moments figure .pr{position:relative;width:100%;height:100%;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath d='M0 13 L0 8 Q2.3 2.7 4.6 8.7 Q7.6 1.3 10.7 7.9 Q16.1 2.5 21.5 6.9 Q23.2 2.7 24.8 7.8 Q30.9 -0.6 37.0 7.8 Q42.8 0.3 48.6 9.2 Q55.5 -0.5 62.5 6.7 Q67.2 3.1 72.0 7.7 Q74.8 1.0 77.6 6.7 Q80.4 1.1 83.2 8.0 Q86.1 0.3 89.0 7.2 Q93.3 0.5 97.5 6.7 Q104.0 1.6 110.6 8.4 Q113.2 3.3 115.8 9.0 Q118.0 0.7 120.3 8.6 Q126.0 3.1 131.8 7.8 Q138.3 2.0 144.8 7.4 Q149.8 2.8 154.8 9.0 Q159.3 1.7 163.9 6.7 Q166.8 2.5 169.8 7.8 Q172.3 1.5 174.9 8.6 Q180.4 0.9 185.9 7.8 Q190.5 2.4 195.0 8.1 Q197.5 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/200px 13px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath transform='matrix%281 0 0 -1 0 13%29' d='M0 13 L0 8 Q7.2 3.1 14.5 6.8 Q16.5 2.7 18.5 8.7 Q24.0 0.6 29.5 8.3 Q34.7 1.7 39.8 7.0 Q43.9 0.9 48.0 8.6 Q55.4 3.1 62.9 8.1 Q67.1 0.4 71.3 6.7 Q72.9 1.2 74.6 7.5 Q78.4 2.9 82.1 8.1 Q87.0 0.3 91.9 6.7 Q95.3 -0.1 98.8 8.0 Q106.3 2.0 113.8 7.1 Q120.6 2.5 127.5 8.7 Q134.4 2.4 141.4 8.8 Q145.0 3.2 148.6 9.3 Q151.1 2.3 153.5 8.6 Q157.8 1.5 162.1 8.0 Q169.1 1.4 176.2 8.9 Q179.8 2.8 183.4 9.1 Q187.7 1.6 192.0 9.2 Q196.0 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 100%/200px 13px repeat-x,linear-gradient(#000 0 0) 0 50%/100% calc(100% - 24px) no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath d='M0 13 L0 8 Q2.3 2.7 4.6 8.7 Q7.6 1.3 10.7 7.9 Q16.1 2.5 21.5 6.9 Q23.2 2.7 24.8 7.8 Q30.9 -0.6 37.0 7.8 Q42.8 0.3 48.6 9.2 Q55.5 -0.5 62.5 6.7 Q67.2 3.1 72.0 7.7 Q74.8 1.0 77.6 6.7 Q80.4 1.1 83.2 8.0 Q86.1 0.3 89.0 7.2 Q93.3 0.5 97.5 6.7 Q104.0 1.6 110.6 8.4 Q113.2 3.3 115.8 9.0 Q118.0 0.7 120.3 8.6 Q126.0 3.1 131.8 7.8 Q138.3 2.0 144.8 7.4 Q149.8 2.8 154.8 9.0 Q159.3 1.7 163.9 6.7 Q166.8 2.5 169.8 7.8 Q172.3 1.5 174.9 8.6 Q180.4 0.9 185.9 7.8 Q190.5 2.4 195.0 8.1 Q197.5 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 0/200px 13px repeat-x,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='13'%3E%3Cpath transform='matrix%281 0 0 -1 0 13%29' d='M0 13 L0 8 Q7.2 3.1 14.5 6.8 Q16.5 2.7 18.5 8.7 Q24.0 0.6 29.5 8.3 Q34.7 1.7 39.8 7.0 Q43.9 0.9 48.0 8.6 Q55.4 3.1 62.9 8.1 Q67.1 0.4 71.3 6.7 Q72.9 1.2 74.6 7.5 Q78.4 2.9 82.1 8.1 Q87.0 0.3 91.9 6.7 Q95.3 -0.1 98.8 8.0 Q106.3 2.0 113.8 7.1 Q120.6 2.5 127.5 8.7 Q134.4 2.4 141.4 8.8 Q145.0 3.2 148.6 9.3 Q151.1 2.3 153.5 8.6 Q157.8 1.5 162.1 8.0 Q169.1 1.4 176.2 8.9 Q179.8 2.8 183.4 9.1 Q187.7 1.6 192.0 9.2 Q196.0 1.3 200.0 8.0 L200 13 Z'/%3E%3C/svg%3E") 0 100%/200px 13px repeat-x,linear-gradient(#000 0 0) 0 50%/100% calc(100% - 24px) no-repeat}
 .mat .ph{position:relative;width:100%;height:100%;overflow:hidden}
 .mat .ph img{width:100%;height:100%;object-fit:cover}
 .moments .divider{margin:0 auto clamp(50px,9vh,110px)}
@@ -254,7 +255,6 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
   .moments figure:nth-child(odd){margin-left:0}.moments figure:nth-child(even){margin-right:0}
   .count i{display:none}
   .count{gap:20px}.count b{font-size:46px}
-  .date .curtain{width:56%}
   .date .forever{font-size:34px}
   .venue .bg img{object-position:40% 50%}
   .zoom .line.a{top:calc(var(--header) + 5vh)}.zoom .line.b{bottom:20vh}
@@ -293,7 +293,7 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
   <!-- 01 · COUPLE (like the reference: photo + big script names) -->
   <section class="couple" id="couple">
     <div class="stick">
-      <div class="cmat" id="cMat"></div>
+      <div class="cmat" id="cMat"><div class="m1"><div class="m2"></div></div></div>
       <div class="frame" id="cFrame">
         <div class="fin" id="cIn">
           <img decoding="async" id="cImg" src="assets/img/kiss-cake.jpg" alt="Ngọc Phú và Lưu Tuyến" style="object-position:50% 30%">
@@ -301,7 +301,7 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
         </div>
       </div>
       <div class="txt" id="cTxt">
-        <div class="caps" id="cKick">Trân trọng báo tin<br>Lễ Thành Hôn của</div>
+        <div class="caps" id="cKick">Trân trọng báo tin<br>Hôn lễ của</div>
         <img class="nimg" id="cN1" src="assets/names-n1.svg" alt="Ngọc Phú">
         <img class="nimg amp" id="cAnd" src="assets/names-and.svg" alt="và">
         <img class="nimg" id="cN2" src="assets/names-n2.svg" alt="Lưu Tuyến">
@@ -316,8 +316,8 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
   <!-- 02 · PAIR -->
   <section class="pair io" id="pair">
     <div class="grid clamp">
-      <figure class="q1 vframe oval" data-par=".06"><div class="ph wipe"><img decoding="async" data-zoom src="assets/img/cake-color.jpg" alt=""></div><img class="fr" src="assets/deco/frame-oval-gold.webp" alt="" aria-hidden="true"></figure>
-      <figure class="q2 vframe oval" data-par="-.1"><div class="ph wipe d2"><img decoding="async" data-zoom src="assets/img/corridor-dark.jpg" alt=""></div><img class="fr" src="assets/deco/frame-oval-gold.webp" alt="" aria-hidden="true"></figure>
+      <figure class="q1 vframe oval" data-par=".06"><div class="ph wipe"><img decoding="async" data-zoom src="assets/img/cake-color.jpg" alt=""></div><img class="fr" src="assets/deco/frame-oval-wine.webp" alt="" aria-hidden="true"></figure>
+      <figure class="q2 vframe oval" data-par="-.1"><div class="ph wipe d2"><img decoding="async" data-zoom src="assets/img/corridor-dark.jpg" alt=""></div><img class="fr" src="assets/deco/frame-oval-wine.webp" alt="" aria-hidden="true"></figure>
     </div>
   </section>
 
@@ -338,12 +338,6 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
       <div class="beam" id="dBeam"></div>
       <div class="sway"><div class="spot" id="dSpot"></div></div>
       <div class="shade"></div>
-      <div class="curtain l" id="dCl"></div><div class="curtain r" id="dCr"></div>
-      <div class="valance"></div>
-      <div class="inner" id="dIn">
-        <div class="forever">Đếm ngược đến ngày vui</div>
-        <div class="count" id="count"><div><b data-k="d">00</b><span class="tiny">Ngày</span></div><i>:</i><div><b data-k="h">00</b><span class="tiny">Giờ</span></div><i>:</i><div><b data-k="m">00</b><span class="tiny">Phút</span></div><i>:</i><div><b data-k="s">00</b><span class="tiny">Giây</span></div></div>
-      </div>
       <div class="cal" id="dCal">
         <div class="cin" id="dCin">
           <div class="yr caps">2026</div>
@@ -358,12 +352,12 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
   <!-- 05 · MOMENTS (equal photos, left/right, slide in) -->
   <section class="moments">
     <div class="list">
-      <figure class="io"><div class="zoomwrap wipe sl mat"><div class="ph"><img decoding="async" data-zoom src="assets/img/dance.jpg" alt=""></div></div></figure>
-      <figure class="io"><div class="zoomwrap wipe sr mat"><div class="ph"><img decoding="async" data-zoom src="assets/img/toast.jpg" alt=""></div></div></figure>
-      <figure class="io"><div class="zoomwrap wipe sl mat"><div class="ph"><img decoding="async" data-zoom src="assets/img/laugh.jpg" alt=""></div></div></figure>
-      <figure class="io"><div class="zoomwrap wipe sr mat"><div class="ph"><img decoding="async" data-zoom src="assets/img/hallway.jpg" alt=""></div></div></figure>
-      <figure class="io"><div class="zoomwrap wipe sl mat"><div class="ph"><img decoding="async" data-zoom src="assets/img/candles.jpg" alt=""></div></div></figure>
-      <figure class="io"><div class="zoomwrap wipe sr mat"><div class="ph"><img decoding="async" data-zoom src="assets/img/mirror.jpg" alt=""></div></div></figure>
+      <figure class="io"><i class="shd"></i><div class="pr"><div class="zoomwrap wipe sl mat"><div class="ph"><img decoding="async" data-zoom src="assets/img/dance.jpg" alt=""></div></div></div></figure>
+      <figure class="io"><i class="shd"></i><div class="pr"><div class="zoomwrap wipe sr mat"><div class="ph"><img decoding="async" data-zoom src="assets/img/toast.jpg" alt=""></div></div></div></figure>
+      <figure class="io"><i class="shd"></i><div class="pr"><div class="zoomwrap wipe sl mat"><div class="ph"><img decoding="async" data-zoom src="assets/img/laugh.jpg" alt=""></div></div></div></figure>
+      <figure class="io"><i class="shd"></i><div class="pr"><div class="zoomwrap wipe sr mat"><div class="ph"><img decoding="async" data-zoom src="assets/img/hallway.jpg" alt=""></div></div></div></figure>
+      <figure class="io"><i class="shd"></i><div class="pr"><div class="zoomwrap wipe sl mat"><div class="ph"><img decoding="async" data-zoom src="assets/img/candles.jpg" alt=""></div></div></div></figure>
+      <figure class="io"><i class="shd"></i><div class="pr"><div class="zoomwrap wipe sr mat"><div class="ph"><img decoding="async" data-zoom src="assets/img/mirror.jpg" alt=""></div></div></div></figure>
     </div>
   </section>
 
@@ -414,7 +408,7 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
   var vw,vh,W0,H0,HEAD, L={};
   var couple=$('couple'), cFrame=$('cFrame'), cIn=$('cIn'), cImg2=$('cImg2'), cW2=$('cImg2Wrap'), cTxt=$('cTxt'), cKick=$('cKick'), cN1=$('cN1'), cN2=$('cN2'), cAnd=$('cAnd'), cDate=$('cDate'), eL=$('eL'), eR=$('eR'), eB=$('eB'), cMat=$('cMat');
   var hb=$('heroBlur'), hs=$('heroSharp'), hv=$('heroVeil'), hf=$('heroFoot'), hWel=$('hWel'), hDate=$('hDate');
-  var dS=$('date'), dBg=$('dBg'), dBeam=$('dBeam'), dSpot=$('dSpot'), dCl=$('dCl'), dCr=$('dCr'), dIn=$('dIn'), dCal=$('dCal'), dCin=$('dCin'), calRing=$('calRing'), calHeart=$('calHeart');
+  var dS=$('date'), dBg=$('dBg'), dBeam=$('dBeam'), dSpot=$('dSpot'), dCal=$('dCal'), dCin=$('dCin'), calRing=$('calRing'), calHeart=$('calHeart');
   var zoom=$('zoom'), zPic=$('zPic'), zIn=$('zIn'), zA=$('zA'), zB=$('zB'), zK=$('zK');
   var dollies=[].slice.call(document.querySelectorAll('[data-dolly]')).map(function(el){return {el:el}});
   var zooms=[].slice.call(document.querySelectorAll('[data-zoom]')).map(function(el){return {el:el,par:parseFloat(el.getAttribute('data-par')||0)}});
@@ -472,7 +466,7 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
     if(near(L.couple.top,L.couple.h,y)){
       var cp=prog('couple',y);
       var sk=ease(seg(cp,.64,.9));
-      var mp=vw<820?24:Math.min(44,Math.max(30,vw*.028)), iy=HEAD+mp+16, ix=vw<820?30:Math.max(30+mp,vw*.16), ib=mp+44;
+      var mp=vw<820?24:Math.min(44,Math.max(30,vw*.028)), iy=HEAD+mp+16, ix=vw<820?30:Math.max(30+mp,vw*.16), ib=mp+26;
       var sx=lerp(1,(vw-2*ix)/vw,sk), sy=lerp(1,(vh-iy-ib)/vh,sk), ty=lerp(0,(iy-ib)/2,sk);
       var m=Math.max(sx,sy), zk=lerp(1.22,1.02,eout(seg(cp,0,.9)));
       set(cFrame,'transform','translate3d(0,'+ty.toFixed(1)+'px,0) scale('+sx.toFixed(4)+','+sy.toFixed(4)+')');
@@ -520,15 +514,12 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
 
     /* date: curtains open -> zoom into photo -> calendar */
     if(near(L.date.top,L.date.h,y)){
-      var dp=prog('date',y), cu=ease(seg(dp,0,.26)), sp=eout(seg(dp,.04,.34));
-      set(dCl,'transform','translate3d('+(-84*cu).toFixed(2)+'%,0,0)'); set(dCr,'transform','translate3d('+(84*cu).toFixed(2)+'%,0,0)');
-      set(dSpot,'transform','scale('+lerp(.18,1,sp).toFixed(4)+')'); set(dBeam,'opacity',sp.toFixed(3));
-      var zi=ease(seg(dp,.3,.66)); set(dBg,'transform','scale('+lerp(1,1.32,zi).toFixed(4)+')');
-      var ti=eout(seg(dp,.18,.34))*(1-seg(dp,.6,.7));
-      set(dIn,'opacity',ti.toFixed(3)); set(dIn,'transform','translate3d(0,'+((1-eout(seg(dp,.18,.34)))*30).toFixed(1)+'px,0)');
-      var cw=ease(seg(dp,.64,.84)); set(dCal,'clip-path','inset('+((1-cw)*100).toFixed(2)+'% 0 0 0)');
-      var ci=eout(seg(dp,.7,.88)); set(dCin,'opacity',ci.toFixed(3)); set(dCin,'transform','translate3d(0,'+((1-ci)*6).toFixed(2)+'vh,0)');
-      var rk=ease(seg(dp,.84,.96)); set(calRing,'stroke-dashoffset',(1-rk).toFixed(3)); set(calHeart,'opacity',seg(dp,.93,.99).toFixed(3));
+      var dp=prog('date',y), sp=eout(seg(dp,0,.3));
+      set(dSpot,'transform','scale('+lerp(.18,1,sp).toFixed(4)+')'); set(dBeam,'opacity',(sp*(1-seg(dp,.5,.7))).toFixed(3));
+      var zi=ease(seg(dp,.12,.6)); set(dBg,'transform','scale('+lerp(1,1.3,zi).toFixed(4)+')');
+      var cw=ease(seg(dp,.5,.72)); set(dCal,'opacity',cw.toFixed(3));
+      var ci=eout(seg(dp,.56,.8)); set(dCin,'opacity',ci.toFixed(3)); set(dCin,'transform','translate3d(0,'+((1-ci)*6).toFixed(2)+'vh,0)');
+      var rk=ease(seg(dp,.78,.93)); set(calRing,'stroke-dashoffset',(1-rk).toFixed(3)); set(calHeart,'opacity',seg(dp,.9,.97).toFixed(3));
     }
 
     /* dolly: slow push-in on background photos */
@@ -561,14 +552,6 @@ section.date{position:relative;height:340vh;background:#141011;color:#FBF4EA;tex
   },{threshold:.18});
   document.querySelectorAll('.io').forEach(function(s){io.observe(s)});
 
-  /* countdown to 18.12.2026 19:00 (GMT+7) */
-  var target=new Date('2026-12-18T19:00:00+07:00').getTime(), cells={};
-  document.querySelectorAll('#count b').forEach(function(b){cells[b.dataset.k]=b});
-  function pad(n){return (n<10?'0':'')+n}
-  function tick(){ var s2=Math.floor(Math.max(0,target-Date.now())/1000);
-    cells.d.textContent=pad(Math.floor(s2/86400)); cells.h.textContent=pad(Math.floor(s2%86400/3600));
-    cells.m.textContent=pad(Math.floor(s2%3600/60)); cells.s.textContent=pad(s2%60); }
-  tick(); setInterval(tick,1000);
 
 })();
 </script>
