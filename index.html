@@ -172,6 +172,53 @@ section{position:relative}
 .zoom .line.b{top:auto;bottom:9vh}
 .zoom .kick{position:absolute;left:0;right:0;bottom:4vh;text-align:center;color:#fff}
 
+/* ---------- 07 WISHES + GIFT ---------- */
+.wish{background-color:#BC8E90;background-image:radial-gradient(circle,rgba(255,236,236,.34) 1.6px,transparent 2.2px),radial-gradient(circle,rgba(255,236,236,.34) 1.6px,transparent 2.2px);background-size:22px 22px;background-position:0 0,11px 11px;position:relative;color:var(--rose-deep);padding:calc(var(--header) + 70px) var(--gutter) 120px;text-align:center;overflow:hidden}
+.wish::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(40,12,18,.5),rgba(40,12,18,0) 26%,rgba(40,12,18,0) 74%,rgba(40,12,18,.5))}
+.wish .wrap{position:relative;max-width:620px;margin:0 auto}
+.wish h2{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(42px,5vw,68px);line-height:1.1;color:#FBF4EA;text-shadow:0 2px 18px rgba(60,20,28,.35);margin:0}
+.wish .sub{color:rgba(251,244,234,.9);font-size:clamp(15px,1.4vw,18px);margin:10px 0 clamp(26px,4vh,40px)}
+.letter{position:relative;background:#FBF8F2;padding:clamp(26px,4vw,44px);text-align:left;box-shadow:0 26px 50px -24px rgba(45,12,20,.55),0 0 0 1px rgba(142,90,98,.12)}
+.letter::before{content:"";position:absolute;inset:10px;border:1px solid rgba(142,90,98,.35);pointer-events:none}
+.letter::after{content:"";position:absolute;inset:-30% -20%;z-index:-1;background:radial-gradient(closest-side,rgba(255,238,232,.45),rgba(255,238,232,0));pointer-events:none}
+.letter label{display:block;font-family:var(--text);text-transform:uppercase;letter-spacing:.22em;font-size:11px;color:var(--rose-deep);margin:0 0 8px}
+.letter input,.letter textarea{display:block;width:100%;box-sizing:border-box;font-family:var(--text);font-size:17px;color:#3a2226;background:transparent;border:0;border-bottom:1px solid rgba(142,90,98,.45);padding:8px 2px 10px;margin:0 0 24px;outline:none;border-radius:0;transition:border-color .3s}
+.letter textarea{min-height:120px;resize:vertical;line-height:1.6;background-image:repeating-linear-gradient(180deg,transparent 0 26.2px,rgba(142,90,98,.16) 26.2px 27.2px);background-position:0 8px}
+.letter input:focus,.letter textarea:focus{border-color:var(--rose-deep)}
+.letter input::placeholder,.letter textarea::placeholder{color:rgba(142,90,98,.55);font-style:italic}
+.letter .send{display:flex;justify-content:center}
+.letter button{font-family:var(--text);font-size:12px;letter-spacing:.26em;text-transform:uppercase;padding:15px 34px;background:#5E2029;color:#FBF4EA;border:0;cursor:pointer;transition:background .3s,transform .3s}
+.letter button:hover{background:#7A2E3A;transform:translateY(-1px)}
+.letter button:disabled{opacity:.6;cursor:default;transform:none}
+.letter .err{color:#9b2c3a;font-size:14px;text-align:center;margin:-8px 0 14px;min-height:1em}
+.sent{margin-top:28px;text-align:left}
+.sent .item{position:relative;background:#FBF8F2;padding:20px 22px 18px;margin-top:14px;box-shadow:0 14px 30px -18px rgba(45,12,20,.5);animation:sentIn .8s cubic-bezier(.2,.75,.2,1) both}
+@keyframes sentIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.sent .lock{display:flex;align-items:center;gap:8px;font-family:var(--text);text-transform:uppercase;letter-spacing:.18em;font-size:10.5px;color:var(--rose-deep);margin-bottom:10px}
+.sent .lock svg{width:14px;height:14px;flex:none}
+.sent .who{font-family:var(--display);font-style:italic;font-size:22px;color:#5E2029}
+.sent .msg{margin-top:6px;color:#3a2226;line-height:1.6;white-space:pre-wrap;filter:blur(4px);transition:filter .5s ease;cursor:pointer;user-select:none}
+.sent .item.show .msg{filter:none;user-select:text}
+.sent .hint{font-size:13px;color:rgba(142,90,98,.8);font-style:italic;margin-top:8px}
+.gift{margin-top:clamp(54px,9vh,90px);display:flex;flex-direction:column;align-items:center}
+.gift button{background:none;border:0;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;color:#FBF4EA}
+.gift .box{width:clamp(150px,18vw,190px);height:clamp(150px,18vw,190px);filter:drop-shadow(0 10px 18px rgba(45,12,20,.3))}
+.gift .lbl{font-family:var(--display);font-style:italic;font-size:clamp(28px,3vw,38px);margin-top:4px;text-shadow:0 2px 14px rgba(60,20,28,.35)}
+.gift .tiny{color:rgba(251,244,234,.85);margin-top:6px}
+.qrm{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(40,12,18,.62);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .4s ease,visibility 0s linear .4s}
+.qrm.open{opacity:1;visibility:visible;transition:opacity .4s ease}
+.qrm .card{position:relative;background:#FBF8F2;width:min(380px,100%);max-height:100%;overflow:auto;padding:30px 26px 26px;text-align:center;color:#3a2226;box-shadow:0 30px 60px -20px rgba(20,6,10,.6);transform:translateY(16px) scale(.97);transition:transform .5s cubic-bezier(.2,.75,.2,1)}
+.qrm.open .card{transform:none}
+.qrm .card::before{content:"";position:absolute;inset:9px;border:1px solid rgba(142,90,98,.35);pointer-events:none}
+.qrm h3{font-family:var(--display);font-style:italic;font-weight:400;font-size:32px;margin:0;color:#5E2029}
+.qrm .note{font-size:15px;color:rgba(58,34,38,.8);margin:6px 0 14px;line-height:1.5}
+.qrm img{display:block;width:100%;max-width:280px;margin:0 auto;height:auto}
+.qrm .acc{margin-top:12px;font-family:var(--text)}
+.qrm .acc .nm{letter-spacing:.16em;font-size:14px;color:#5E2029}
+.qrm .acc .no{font-size:24px;letter-spacing:.08em;margin-top:2px;user-select:all}
+.qrm .acc .bk{font-size:13px;color:rgba(58,34,38,.7)}
+.qrm .copy{margin-top:14px;font-family:var(--text);font-size:11px;letter-spacing:.24em;text-transform:uppercase;padding:12px 22px;border:1px solid var(--rose-deep);background:transparent;color:var(--rose-deep);cursor:pointer}
+.qrm .close{position:absolute;top:14px;right:14px;width:34px;height:34px;border:0;background:none;color:#5E2029;font-size:26px;line-height:1;cursor:pointer;z-index:1}
 /* ---------- 04 DATE : countdown over photo ---------- */
 section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;text-align:center}
 .date .stick{display:flex;align-items:flex-end;justify-content:center;padding:calc(var(--header) + 40px) var(--gutter) 10vh}
@@ -284,7 +331,17 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
   <span class="tiny"><span class="f">18 · 12 · 2026</span><span class="s">18.12.26</span></span>
 </div>
 
-<audio id="bgm" src="assets/audio/nhac-nen.mp3" loop preload="auto" autoplay></audio>
+<div class="qrm" id="qrm" role="dialog" aria-modal="true" aria-labelledby="qrT" aria-hidden="true">
+  <div class="card">
+    <button class="close" type="button" id="qrClose" aria-label="Đóng">&times;</button>
+    <h3 id="qrT">Quà mừng</h3>
+    <p class="note">Cảm ơn tấm lòng của bạn dành cho chúng mình</p>
+    <img src="assets/img/qr.jpg" alt="Mã QR chuyển khoản Techcombank" width="680" height="765" loading="lazy">
+    <div class="acc"><div class="nm">LE NGOC PHU</div><div class="no" id="qrNo">1995 1209 00</div><div class="bk">Techcombank</div></div>
+    <button class="copy" type="button" id="qrCopy">Sao chép số tài khoản</button>
+  </div>
+</div>
+<audio id="bgm" src="assets/audio/nhac-nen.mp3" preload="none"></audio>
 <button class="music" id="musicBtn" type="button" aria-label="Bật nhạc nền" aria-pressed="false"><span class="lbl">Bật nhạc</span><i></i><i></i><i></i><i></i></button>
 
 <main>
@@ -393,9 +450,35 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
     </div>
   </section>
 
+  <!-- 07 · WISHES + GIFT -->
+  <section class="wish io" id="wish">
+    <div class="wrap">
+      <h2 class="su">Hộp thư lời chúc</h2>
+      <p class="sub su d1">Gửi đôi lời đến Ngọc Phú &amp; Lưu Tuyến nhé</p>
+      <form class="letter su d2" id="wishForm" novalidate>
+        <label for="wName">Tên người gửi</label>
+        <input id="wName" name="name" type="text" maxlength="60" autocomplete="name" placeholder="Tên của bạn">
+        <label for="wMsg">Lời chúc</label>
+        <textarea id="wMsg" name="msg" maxlength="1000" placeholder="Viết lời chúc của bạn..."></textarea>
+        <div class="err" id="wErr" role="alert"></div>
+        <div class="send"><button type="submit" id="wSend">Gửi lời chúc</button></div>
+      </form>
+      <div class="sent" id="wSent" aria-live="polite"></div>
+      <div class="gift su">
+        <button type="button" id="giftBtn" aria-haspopup="dialog" aria-controls="qrm">
+          <div class="box" id="giftBox" aria-hidden="true"></div>
+          <span class="lbl">Quà mừng</span>
+          <span class="tiny">Chạm vào hộp quà</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
 </main>
 
 <script src="assets/js/lenis.min.js"></script>
+<script src="assets/js/lottie_light.min.js"></script>
 <script>
 (function(){
   var $=function(id){return document.getElementById(id)};
@@ -565,23 +648,80 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
   document.querySelectorAll('.io').forEach(function(s){io.observe(s)});
 
 
-  /* background music: starts on first tap/click/key, fades in, toggle button */
+  /* background music: gapless Web Audio loop, autoplay when allowed, else first tap/click/key */
   (function(){
-    var a=document.getElementById('bgm'), b=document.getElementById('musicBtn'); if(!a||!b) return;
-    var want=true, fadeId=0, TARGET=.55;
-    function ui(on){ b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false'); b.setAttribute('aria-label',on?'Tắt nhạc nền':'Bật nhạc nền'); }
-    function fade(to,ms,done){ cancelAnimationFrame(fadeId); var from=a.volume, t0=performance.now();
-      (function st(t){ var k=Math.min(1,(t-t0)/ms); a.volume=from+(to-from)*k; if(k<1) fadeId=requestAnimationFrame(st); else if(done) done(); })(t0); }
-    function play(){ a.volume=0; var pr=a.play(); if(pr&&pr.then) pr.then(function(){ ui(true); fade(TARGET,2600); }).catch(function(){ ui(false); }); else { ui(true); fade(TARGET,2600); } }
-    function stop(){ ui(false); fade(0,600,function(){ a.pause(); }); }
-    function first(e){ if(e&&e.target&&b.contains(e.target)) return; off(); if(want&&a.paused) play(); }
+    var el=document.getElementById('bgm'), b=document.getElementById('musicBtn'); if(!el||!b) return;
+    var AC=window.AudioContext||window.webkitAudioContext, TARGET=.55, want=true, on=false;
+    function ui(v){ on=v; b.classList.toggle('on',v); b.setAttribute('aria-pressed',v?'true':'false'); b.setAttribute('aria-label',v?'Tắt nhạc nền':'Bật nhạc nền'); }
     var evs=['pointerdown','touchend','keydown'];
     function off(){ evs.forEach(function(n){ window.removeEventListener(n,first,true); }); }
+    function first(e){ if(e&&e.target&&b.contains(e.target)) return; if(want) start(true); }
     evs.forEach(function(n){ window.addEventListener(n,first,true); });
-    /* try to start right away; browsers that block unmuted autoplay fall back to the first tap */
-    a.preload='auto'; a.volume=0; var tr=a.play(); if(tr&&tr.then) tr.then(function(){ off(); ui(true); fade(TARGET,2600); }).catch(function(){ ui(false); });
-    b.addEventListener('click',function(){ off(); if(a.paused||!b.classList.contains('on')){ want=true; play(); } else { want=false; stop(); } });
-    document.addEventListener('visibilitychange',function(){ if(document.hidden){ if(!a.paused) a.pause(); } else if(want&&b.classList.contains('on')) a.play().catch(function(){}); });
+    if(AC){
+      var ctx=null, gain, buf=null, src=null, loading=null;
+      function load(){ if(loading) return loading; ctx=ctx||new AC(); gain=gain||ctx.createGain(); gain.gain.value=0; gain.connect(ctx.destination);
+        loading=fetch(el.getAttribute('src')).then(function(r){return r.arrayBuffer()}).then(function(ab){ return new Promise(function(res,rej){ ctx.decodeAudioData(ab,res,rej); }); }).then(function(d){ buf=d; return d; });
+        return loading; }
+      function ramp(to,sec){ var t=ctx.currentTime; gain.gain.cancelScheduledValues(t); gain.gain.setValueAtTime(gain.gain.value,t); gain.gain.linearRampToValueAtTime(to,t+sec); }
+      function start(fromGesture){
+        load(); var r=ctx.resume(); var go=function(){ if(ctx.state!=='running'){ ui(false); return; } off();
+          loading.then(function(){ if(!src){ src=ctx.createBufferSource(); src.buffer=buf; src.loop=true; src.loopStart=0; src.loopEnd=buf.duration; src.connect(gain); src.start(); }
+            ui(true); ramp(TARGET,2.6); }); };
+        if(r&&r.then) r.then(go,function(){ ui(false); }); else go(); }
+      function stop(){ ui(false); ramp(0,.6); setTimeout(function(){ if(!on&&ctx) ctx.suspend(); },650); }
+      b.addEventListener('click',function(){ off(); if(on){ want=false; stop(); } else { want=true; start(true); } });
+      document.addEventListener('visibilitychange',function(){ if(!ctx) return; if(document.hidden) ctx.suspend(); else if(want&&on) ctx.resume(); });
+      start(false);
+    } else {
+      el.loop=true;
+      function start(){ el.volume=TARGET; var pr=el.play(); if(pr&&pr.then) pr.then(function(){ off(); ui(true); },function(){ ui(false); }); else ui(true); }
+      b.addEventListener('click',function(){ off(); if(on){ want=false; el.pause(); ui(false); } else { want=true; start(); } });
+      start();
+    }
+  })();
+
+  /* wishes: saved on this device only, shown blurred to the sender; optional Google Form forwarding */
+  (function(){
+    var FORM={action:'',name:'',msg:''}; /* set to a Google Form formResponse URL + entry ids to forward wishes to the couple */
+    var f=document.getElementById('wishForm'), out=document.getElementById('wSent'), err=document.getElementById('wErr'), btn=document.getElementById('wSend'); if(!f) return;
+    var KEY='thiep-loi-chuc', LOCK='<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>';
+    function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ return []; } }
+    function save(a){ try{ localStorage.setItem(KEY,JSON.stringify(a)); }catch(e){} }
+    function card(w){ var d=document.createElement('div'); d.className='item';
+      var l=document.createElement('div'); l.className='lock'; l.innerHTML=LOCK; l.appendChild(document.createTextNode('Đã gửi · chỉ bạn nhìn thấy'));
+      var n=document.createElement('div'); n.className='who'; n.textContent=w.name;
+      var m=document.createElement('div'); m.className='msg'; m.textContent=w.msg; m.title='Chạm để xem';
+      var h=document.createElement('div'); h.className='hint'; h.textContent='Lời chúc đã được niêm phong. Chạm để xem lại.';
+      m.addEventListener('click',function(){ d.classList.toggle('show'); h.textContent=d.classList.contains('show')?'Chạm lần nữa để niêm phong lại.':'Lời chúc đã được niêm phong. Chạm để xem lại.'; });
+      d.appendChild(l); d.appendChild(n); d.appendChild(m); d.appendChild(h); return d; }
+    load().forEach(function(w){ out.appendChild(card(w)); });
+    f.addEventListener('submit',function(e){ e.preventDefault();
+      var name=f.name.value.trim(), msg=f.msg.value.trim(); err.textContent='';
+      if(!name){ err.textContent='Bạn điền tên người gửi nhé.'; f.name.focus(); return; }
+      if(!msg){ err.textContent='Bạn viết vài dòng lời chúc nhé.'; f.msg.focus(); return; }
+      var w={name:name,msg:msg,t:Date.now()}, all=load(); all.push(w); save(all);
+      if(FORM.action){ try{ var fd=new FormData(); fd.append(FORM.name,name); fd.append(FORM.msg,msg); fetch(FORM.action,{method:'POST',mode:'no-cors',body:fd}).catch(function(){}); }catch(x){} }
+      btn.disabled=true; btn.textContent='Đã gửi';
+      out.appendChild(card(w)); f.msg.value='';
+      setTimeout(function(){ btn.disabled=false; btn.textContent='Gửi lời chúc'; },1800);
+    });
+  })();
+
+  /* gift: Lottie box, opens QR dialog */
+  (function(){
+    var box=document.getElementById('giftBox'), gb=document.getElementById('giftBtn'), m=document.getElementById('qrm'), cl=document.getElementById('qrClose'), cp=document.getElementById('qrCopy'); if(!gb||!m) return;
+    var anim=null;
+    if(window.lottie&&box){ fetch('assets/js/gift.json').then(function(r){return r.json()}).then(function(j){ anim=lottie.loadAnimation({container:box,renderer:'svg',loop:true,autoplay:!matchMedia('(prefers-reduced-motion: reduce)').matches,animationData:j}); }).catch(function(){}); }
+    var last=null;
+    function open(){ last=document.activeElement; m.classList.add('open'); m.setAttribute('aria-hidden','false'); if(lenis&&lenis.stop) lenis.stop(); setTimeout(function(){ cl.focus(); },50); }
+    function close(){ m.classList.remove('open'); m.setAttribute('aria-hidden','true'); if(lenis&&lenis.start) lenis.start(); if(last&&last.focus) last.focus(); }
+    gb.addEventListener('click',open); cl.addEventListener('click',close);
+    m.addEventListener('click',function(e){ if(e.target===m) close(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&m.classList.contains('open')) close(); });
+    cp.addEventListener('click',function(){ var no='1995120900';
+      var ok=function(){ cp.textContent='Đã sao chép'; setTimeout(function(){ cp.textContent='Sao chép số tài khoản'; },1800); };
+      var sel=function(){ var r=document.createRange(); r.selectNodeContents(document.getElementById('qrNo')); var s2=getSelection(); s2.removeAllRanges(); s2.addRange(r); cp.textContent='Đã chọn số, bấm sao chép'; };
+      try{ navigator.clipboard.writeText(no).then(ok,sel); }catch(x){ sel(); } });
   })();
 
 })();
