@@ -16,7 +16,7 @@
 <link rel="preload" href="assets/img/rings-blur.jpg" as="image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Bodoni+Moda:opsz,wght@6..96,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Bodoni+Moda:opsz,wght@6..96,400&family=Caveat:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:"Burgues";src:url("assets/fonts/burgues.woff2") format("woff2");font-display:swap}
 @font-face{font-family:"Pinyon";src:url("assets/fonts/pinyon.woff2") format("woff2");font-display:swap}
@@ -125,7 +125,7 @@ section{position:relative}
 .couple .edge.b{left:0;right:0;bottom:2.4vh;text-align:center}
 
 /* ---------- 02 PAIR : two staggered photos ---------- */
-.pair{background:#A9757A url(assets/deco/damask2.jpg) 50% 0/250px 253px repeat;position:relative;padding:calc(var(--header) + 70px) var(--gutter) 140px;overflow:hidden}
+.pair{background:#BC8E90 url(assets/deco/damask3.jpg) 50% 0/250px 253px repeat;position:relative;padding:calc(var(--header) + 70px) var(--gutter) 140px;overflow:hidden}
 .pair .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(12px,2vw,28px);align-items:start}
 .pair figure{position:relative;will-change:transform;aspect-ratio:991/1400;margin:0}
 .pair .q1{grid-column:2 / span 5}
@@ -148,7 +148,7 @@ section{position:relative}
 .zoom .stick{background:#1d1617}
 .zoom .pic{position:absolute;inset:0;overflow:hidden;will-change:transform;transform-origin:50% 50%}
 .zoom .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-.zoom .line{position:absolute;left:0;white-space:nowrap;font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(56px,8.6vw,150px);line-height:1;color:#fff;mix-blend-mode:difference;will-change:transform;pointer-events:none}
+.zoom .line{position:absolute;left:0;white-space:nowrap;font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(56px,7.6vw,140px);line-height:1;color:#fff;mix-blend-mode:difference;will-change:transform;pointer-events:none}
 .zoom .line.a{top:calc(var(--header) + 1.5vh)}
 .zoom .line.b{top:auto;bottom:9vh}
 .zoom .kick{position:absolute;left:0;right:0;bottom:4vh;text-align:center;color:#fff}
@@ -166,21 +166,30 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
 .date .beam{position:absolute;left:50%;top:-8%;width:min(90vw,1100px);height:105%;transform:translateX(-50%);mix-blend-mode:screen;opacity:0;transition:opacity 1.8s ease .9s;pointer-events:none}
 .in .beam{opacity:1}
 .date .beam::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 34% 105% at 50% 0,rgba(255,238,214,.3),rgba(255,238,214,.1) 55%,rgba(255,238,214,0) 80%)}
-.date .curtain{position:absolute;top:0;bottom:0;width:52%;pointer-events:none;z-index:2;
-  background:linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,0) 30%,rgba(0,0,0,0) 70%,rgba(0,0,0,.4)),repeating-linear-gradient(90deg,#140e0f 0,#2b2022 1.3vw,#4a3a3c 2.2vw,#2b2022 3.1vw,#140e0f 4.4vw);
-  transition:transform 2.8s cubic-bezier(.65,0,.25,1) .15s;will-change:transform;box-shadow:0 0 60px rgba(0,0,0,.7)}
-.date .curtain.l{left:0;transform-origin:0 50%}
-.date .curtain.r{right:0;transform-origin:100% 50%}
-.date .curtain::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent)}
-.in .curtain.l{transform:translate3d(-80%,0,0) scaleX(.95)}
-.in .curtain.r{transform:translate3d(80%,0,0) scaleX(.95)}
-.date .valance{position:absolute;left:0;right:0;top:0;height:clamp(54px,9vh,90px);z-index:3;pointer-events:none;
-  background:radial-gradient(ellipse 50% 100% at 50% 0,#3a2b2d 0,#1d1416 70%) 0 0/clamp(120px,16vw,220px) 100% repeat-x;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+
+.date .inner{position:relative;text-shadow:0 2px 18px rgba(0,0,0,.55)}
 .date .inner{z-index:4}
-.date .divider{width:min(300px,64vw);margin:0 auto clamp(14px,2vh,22px)}
-.date .divider.b{margin:clamp(18px,2.6vh,30px) auto 0;transform:scaleY(-1)}
-.date .inner{position:relative;text-shadow:0 2px 20px rgba(0,0,0,.6)}
-.date .forever{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(40px,5.4vw,78px);line-height:1.1;text-wrap:balance}
+.hand{font-family:"Caveat","Segoe Print","Bradley Hand",cursive}
+.date .forever{font-family:"Caveat","Segoe Print",cursive;font-weight:400;font-size:clamp(28px,3vw,42px);line-height:1;letter-spacing:.01em}
+.date .forever b{display:block;font-weight:600;font-size:clamp(52px,6.6vw,96px);line-height:.95;margin-top:4px}
+.date .count b{font-family:"Caveat","Segoe Print",cursive;font-weight:600;font-size:clamp(64px,8.4vw,124px);letter-spacing:0;line-height:.9}
+.date .count i{font-family:"Caveat",cursive;font-weight:400;font-size:clamp(40px,5vw,70px);opacity:.8}
+.date .count .lab{display:block;font-family:"Caveat",cursive;font-size:clamp(20px,1.9vw,28px);opacity:.85;margin-top:2px}
+.date .hdate{font-family:"Caveat",cursive;font-weight:600;font-size:clamp(40px,4.4vw,64px);letter-spacing:.06em;margin-top:clamp(14px,2.4vh,26px);position:relative;display:inline-block}
+.date .hdate svg{position:absolute;left:-4%;right:-4%;bottom:-.18em;width:108%;height:.4em;overflow:visible}
+.date .hline{font-family:"Caveat",cursive;font-size:clamp(24px,2.4vw,34px);opacity:.92;margin-top:10px;line-height:1.15}
+.doodle{position:absolute;pointer-events:none;overflow:visible;z-index:3}
+.doodle path,.doodle circle,.doodle ellipse,.doodle line,.doodle polyline,.date .hdate path{fill:none;stroke:#FBF4EA;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.2s cubic-bezier(.45,0,.2,1)}
+.in .doodle path,.in .doodle circle,.in .doodle ellipse,.in .doodle line,.in .doodle polyline,.in .hdate path{stroke-dashoffset:0}
+.doodle.d2 *{transition-delay:.4s}.doodle.d3 *{transition-delay:.8s}.doodle.d4 *{transition-delay:1.2s}.doodle.d5 *{transition-delay:1.6s}
+.doodle.frame{inset:calc(var(--header) + 2vh) 3vw 3vh;width:auto;height:auto}
+.doodle.spark{left:6vw;top:16vh;width:clamp(44px,5vw,70px)}
+.doodle.glass{left:8vw;top:38vh;width:clamp(60px,7vw,110px)}
+.doodle.rings{left:20vw;bottom:24vh;width:clamp(50px,5vw,80px)}
+.doodle.cake{left:9vw;bottom:6vh;width:clamp(90px,10vw,150px)}
+.doodle.star{right:12vw;bottom:9vh;width:clamp(40px,4vw,60px)}
+.doodle.heart{right:9vw;top:30vh;width:clamp(30px,3vw,46px)}
+.doodle.plus1{right:22vw;top:18vh;width:18px}.doodle.plus2{left:30vw;bottom:14vh;width:16px}
 .count{display:flex;justify-content:center;align-items:flex-start;gap:clamp(10px,2.4vw,30px);margin:clamp(14px,2vw,26px) 0 8px}
 .count div{text-align:center;min-width:1.6em}
 .count b{display:block;font-family:var(--num);font-weight:400;font-size:clamp(46px,7vw,104px);line-height:1;font-variant-numeric:lining-nums tabular-nums;letter-spacing:.02em}
@@ -191,7 +200,7 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
 .date .when em{opacity:.85}
 
 /* ---------- 05 MOMENTS : equal photos, staggered left/right, slide in ---------- */
-.moments{background:#A9757A url(assets/deco/damask2.jpg) 50% 0/250px 253px repeat;position:relative;padding:calc(var(--header) + 60px) var(--gutter) 140px;overflow:hidden}
+.moments{background:#BC8E90 url(assets/deco/damask3.jpg) 50% 0/250px 253px repeat;position:relative;padding:calc(var(--header) + 60px) var(--gutter) 140px;overflow:hidden}
 .moments .list{max-width:1100px;margin:0 auto;display:flex;flex-direction:column}
 .moments figure{width:min(40%,440px);aspect-ratio:4/5;position:relative}
 .moments figure+figure{margin-top:-14vh}
@@ -244,16 +253,14 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
   .pair .q2{width:72%;margin:2vh 0 0 auto}
   .pair{padding-bottom:70px}
   .deco{width:110px}
-  .date .curtain{width:56%}
-  .in .curtain.l{transform:translate3d(-86%,0,0)}
-  .in .curtain.r{transform:translate3d(86%,0,0)}
   .moments figure{width:68%}
   .moments figure+figure{margin-top:-8vh}
   .moments figure:nth-child(odd){margin-left:0}.moments figure:nth-child(even){margin-right:0}
   .count i{display:none}
-  .count{gap:20px}.count b{font-size:46px}
+  .count{gap:18px}.date .count b{font-size:56px}
+  .doodle.glass{display:none}.doodle.rings{display:none}.doodle.cake{left:5vw;bottom:3vh;width:78px}.doodle.spark{left:6vw;top:calc(var(--header) + 4vh);width:40px}.doodle.heart{right:7vw;top:40vh}.doodle.plus2{display:none}
   .venue .bg img{object-position:40% 50%}
-  .zoom .line.a{top:calc(var(--header) + 7vh)}.zoom .line.b{bottom:22vh}
+  .zoom .line.a{top:calc(var(--header) + 5vh)}.zoom .line.b{bottom:20vh}
 }
 </style>
 </head>
@@ -321,7 +328,7 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
     <div class="stick">
       <div class="pic" id="zPic"><div class="fin" id="zIn"><img decoding="async" src="assets/img/stairs.jpg" alt="Cô dâu chú rể"></div></div>
       <div class="line a" id="zA">Đẹp hơn cả tình yêu ·</div>
-      <div class="line b" id="zB">là sự đồng hành ·</div>
+      <div class="line b" id="zB">đó là sự đồng hành ·</div>
       <div class="kick tiny" id="zK">No. 02 — Hai chúng mình</div>
     </div>
   </section>
@@ -332,22 +339,18 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
     <div class="beam"></div>
     <div class="sway"><div class="spot"></div></div>
     <div class="shade"></div>
-    <div class="curtain l"></div><div class="curtain r"></div>
-    <div class="valance"></div>
+    <svg class="doodle frame" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M560 30 C640 10 700 40 770 22 C800 14 812 -6 798 4 C780 16 800 44 830 34 C880 20 930 26 965 40 C990 52 985 90 990 140 C996 220 980 300 992 380"/><path pathLength="1" d="M8 560 C20 640 4 720 14 800 C22 880 10 930 40 968 C70 996 130 980 190 988 C230 994 250 970 236 960 C220 950 214 980 240 986 C300 1000 360 984 420 992"/></svg>
+    <svg class="doodle spark d2" viewBox="0 0 60 60" aria-hidden="true"><path pathLength="1" d="M30 4 L31 22 M30 38 L29 56 M4 30 L22 31 M38 30 L56 29 M11 11 L23 23 M37 37 L49 49 M49 11 L37 23 M23 37 L11 49"/></svg><svg class="doodle glass d3" viewBox="0 0 100 150" aria-hidden="true"><path pathLength="1" d="M22 8 C18 40 22 62 40 70 C46 73 46 74 44 78 L42 128 C30 130 22 133 24 136 C40 140 58 139 66 135 C68 132 58 129 48 128 L47 78 C46 74 48 72 54 70 C70 62 72 38 68 8 Z"/><path pathLength="1" d="M24 34 C40 38 52 32 68 36"/></svg><svg class="doodle rings d4" viewBox="0 0 80 60" aria-hidden="true"><ellipse pathLength="1" cx="30" cy="34" rx="20" ry="18"/><ellipse pathLength="1" cx="52" cy="30" rx="20" ry="18"/><path pathLength="1" d="M46 6 L52 12 L58 6"/></svg><svg class="doodle cake d5" viewBox="0 0 150 150" aria-hidden="true"><path pathLength="1" d="M20 140 C60 146 100 146 132 140 M24 138 L26 96 C60 90 96 90 126 96 L128 138 M26 98 C34 110 42 100 50 108 C58 116 66 100 76 108 C86 116 94 100 104 108 C112 114 120 102 126 100 M40 92 L42 62 C66 56 88 56 110 62 L112 92 M58 58 C60 44 62 36 76 34 C90 36 92 44 94 58 M76 34 L76 22 M72 16 C74 10 78 10 80 16 C80 20 74 22 72 16"/></svg><svg class="doodle star d4" viewBox="0 0 60 60" aria-hidden="true"><path pathLength="1" d="M30 4 L36 22 L56 24 L40 36 L46 56 L30 44 L14 56 L20 36 L4 24 L24 22 Z"/></svg><svg class="doodle heart d3" viewBox="0 0 40 36" aria-hidden="true"><path pathLength="1" d="M20 32 C6 22 2 14 6 8 C10 2 18 4 20 12 C22 4 30 2 34 8 C38 14 34 22 20 32 Z"/></svg><svg class="doodle plus1 d2" viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M10 2 L10 18 M2 10 L18 10"/></svg><svg class="doodle plus2 d5" viewBox="0 0 20 20" aria-hidden="true"><path pathLength="1" d="M10 2 L10 18 M2 10 L18 10"/></svg>
     <div class="inner">
-      <img class="divider fd" src="assets/deco/divider-gold.webp" alt="" aria-hidden="true">
-      <div class="forever su">Đếm ngược đến ngày vui</div>
+      <div class="forever su">counting down to<b>our forever</b></div>
       <div class="count su d1" id="count">
-        <div><b data-k="d">00</b><span class="tiny">Ngày</span></div><i>:</i>
-        <div><b data-k="h">00</b><span class="tiny">Giờ</span></div><i>:</i>
-        <div><b data-k="m">00</b><span class="tiny">Phút</span></div><i>:</i>
-        <div><b data-k="s">00</b><span class="tiny">Giây</span></div>
+        <div><b data-k="d">00</b><span class="lab">days</span></div><i>·</i>
+        <div><b data-k="h">00</b><span class="lab">hours</span></div><i>·</i>
+        <div><b data-k="m">00</b><span class="lab">mins</span></div><i>·</i>
+        <div><b data-k="s">00</b><span class="lab">secs</span></div>
       </div>
-      <div class="when su d2">
-        <span class="caps">Thứ Sáu · 18 tháng 12 năm 2026 · 19:00</span>
-        <em>(Nhằm ngày 10 tháng 11 năm Bính Ngọ)</em>
-      </div>
-      <img class="divider b fd d3" src="assets/deco/divider-gold.webp" alt="" aria-hidden="true">
+      <div class="hdate su d2">18 . 12 . 2026<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M4 12 C60 4 120 18 180 9 C220 4 260 14 296 8"/></svg></div>
+      <div class="hline su d3">friday, 7 pm &mdash; from now on,<br>every day is ours</div>
     </div>
   </section>
 
@@ -367,8 +370,6 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
   <section class="venue io">
     <div class="bg" data-dolly="1"><img decoding="async" src="assets/img/armlink.jpg" alt=""></div>
     <div class="shade"></div>
-    <img class="deco tl" src="assets/deco/flourish-gold.webp" alt="" aria-hidden="true">
-    <img class="deco br" src="assets/deco/flourish-gold.webp" alt="" aria-hidden="true">
     <div class="inner">
       <p class="lead su">Kính mời quý khách<br>Đến dự tiệc chung vui cùng gia đình chúng tôi tại</p>
       <div class="nh fd d1">Nhà hàng</div>
@@ -428,6 +429,9 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
     zooms.forEach(function(z){ var r=z.el.parentElement.getBoundingClientRect(); z.top=r.top+scrollY; z.h=r.height; });
     pars.forEach(function(p){ var r=p.el.parentElement.getBoundingClientRect(); p.top=r.top+scrollY; p.h=r.height; });
     dollies.forEach(function(d){ var r=d.el.parentElement.getBoundingClientRect(); d.top=r.top+scrollY; d.h=r.height; });
+    zA.style.fontSize=''; zB.style.fontSize='';
+    var lw=Math.max(zA.offsetWidth,zB.offsetWidth), lim=vw*0.92;
+    if(lw>lim){ var fs=parseFloat(getComputedStyle(zA).fontSize)*lim/lw; zA.style.fontSize=fs+'px'; zB.style.fontSize=fs+'px'; }
     zA._w=zA.offsetWidth; zB._w=zB.offsetWidth;
     update();
   }
@@ -492,8 +496,9 @@ section.date{position:relative;min-height:115svh;overflow:hidden;background:#141
       var zx=lerp(w0/vw,1,g), zy=lerp(h0/vh,1,g), zm=Math.max(zx,zy), zz=lerp(1.3,1,g);
       set(zPic,'transform','scale('+zx.toFixed(4)+','+zy.toFixed(4)+')');
       set(zIn,'transform','scale('+(zm*zz/zx).toFixed(4)+','+(zm*zz/zy).toFixed(4)+')');
-      set(zA,'transform','translate3d('+lerp(vw,-zA._w+vw*.1,zp).toFixed(1)+'px,0,0)');
-      set(zB,'transform','translate3d('+lerp(-zB._w,vw*.8,zp).toFixed(1)+'px,0,0)');
+      var ia=eout(seg(zp,.02,.42)), ib=eout(seg(zp,.12,.52)), dr=seg(zp,.5,1)*vw*.03;
+      set(zA,'transform','translate3d('+(lerp(vw,(vw-zA._w)/2,ia)-dr).toFixed(1)+'px,0,0)');
+      set(zB,'transform','translate3d('+(lerp(-zB._w,(vw-zB._w)/2,ib)+dr).toFixed(1)+'px,0,0)');
       set(zK,'opacity',(1-seg(zp,.6,.8)).toFixed(3));
     }
 
