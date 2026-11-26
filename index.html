@@ -209,7 +209,16 @@ section{position:relative}
 .sent .hint{font-size:14px;color:rgba(142,78,93,.85);font-style:italic;margin-top:8px}
 .gift{margin-top:clamp(40px,7vh,70px);display:flex;flex-direction:column;align-items:center}
 .gift button{background:none;border:0;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;color:var(--pk)}
-.gift .box{width:clamp(150px,17vw,190px);height:clamp(150px,17vw,190px)}
+.gift .env{position:relative;display:block;width:clamp(210px,22vw,260px);aspect-ratio:1.6;margin:14px 0 4px;background:#C88692 url("assets/deco/env-damask.jpg") center/cover;box-shadow:0 18px 26px -14px rgba(110,45,60,.45),0 2px 4px rgba(110,45,60,.18);animation:envF 4.6s ease-in-out infinite;transition:transform .4s}
+.gift .env svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.gift .env .tf{fill:rgba(120,45,62,.10);filter:drop-shadow(0 1.5px 1.2px rgba(90,30,45,.28))}
+.gift .env .bf{fill:rgba(255,235,238,.06)}
+.gift .env .ln{fill:none;stroke:rgba(255,238,240,.55);stroke-width:1;vector-effect:non-scaling-stroke}
+.gift .env .seal{position:absolute;left:50%;top:60%;width:33%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:47% 53% 50% 50%/52% 48% 52% 48%;background:radial-gradient(circle at 38% 34%,#B66F7D,#97505F 62%,#86414F);box-shadow:0 3px 6px rgba(80,25,40,.35),inset 0 0 0 3px rgba(255,255,255,.06),inset 0 -3px 5px rgba(60,15,28,.3);display:flex;align-items:center;justify-content:center}
+.gift .env .seal img{width:104%;max-width:none;height:auto;opacity:.95}
+.gift button:hover .env{transform:translateY(-3px) rotate(-1deg)}
+@keyframes envF{0%,100%{translate:0 0;rotate:0deg}30%{translate:0 -5px;rotate:-1.6deg}70%{translate:0 -2px;rotate:1.2deg}}
+@media (prefers-reduced-motion:reduce){.gift .env{animation:none}}
 .gift .lbl{font-family:"Pinyon Script","Pinyon",cursive;font-size:clamp(48px,5.2vw,62px);line-height:1.2;margin-top:-6px}
 .gift .tiny{color:var(--pkd);margin-top:8px}
 .qrm{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(90,45,55,.5);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .4s ease,visibility 0s linear .4s}
@@ -487,8 +496,11 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
       <div class="sent" id="wSent" aria-live="polite"></div>
       <div class="gift su">
         <button type="button" id="giftBtn" aria-haspopup="dialog" aria-controls="qrm">
-          <div class="box" id="giftBox" aria-hidden="true"></div>
           <span class="lbl">Quà mừng</span>
+          <span class="env" aria-hidden="true">
+            <svg viewBox="0 0 160 100" preserveAspectRatio="none"><path class="bf" d="M0 100L80 50L160 100Z"/><path class="ln" d="M0 100L80 50L160 100"/><path class="tf" d="M0 0H160L80 60Z"/><path class="ln" d="M0 0L80 60L160 0"/></svg>
+            <span class="seal"><img src="assets/logo-white.png" alt="" width="580" height="580"></span>
+          </span>
           <span class="tiny">Chạm vào lá thư</span>
         </button>
       </div>
@@ -500,7 +512,6 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
 </main>
 
 <script src="assets/js/lenis.min.js"></script>
-<script src="assets/js/lottie_light.min.js"></script>
 <script>
 (function(){
   var $=function(id){return document.getElementById(id)};
@@ -733,7 +744,6 @@ section.date{position:relative;height:280vh;background:#141011;color:#FBF4EA;tex
   (function(){
     var box=document.getElementById('giftBox'), gb=document.getElementById('giftBtn'), m=document.getElementById('qrm'), cl=document.getElementById('qrClose'); if(!gb||!m) return;
     var anim=null;
-    if(window.lottie&&box){ fetch('assets/js/gift.json').then(function(r){return r.json()}).then(function(j){ anim=lottie.loadAnimation({container:box,renderer:'svg',loop:true,autoplay:!matchMedia('(prefers-reduced-motion: reduce)').matches,animationData:j}); }).catch(function(){}); }
     var last=null;
     function open(){ last=document.activeElement; m.classList.add('open'); m.setAttribute('aria-hidden','false'); if(lenis&&lenis.stop) lenis.stop(); setTimeout(function(){ cl.focus(); },50); }
     function close(){ m.classList.remove('open'); m.setAttribute('aria-hidden','true'); if(lenis&&lenis.start) lenis.start(); if(last&&last.focus) last.focus(); }
