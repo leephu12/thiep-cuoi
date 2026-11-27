@@ -255,7 +255,7 @@ section{position:relative}
   .qrm .acc .no{font-size:14px}
 }
 /* ---------- 04 DATE : half-wheel of video clips, scroll spins it ---------- */
-section.date{position:relative;height:560vh;background:#141011;color:#FBF4EA}
+section.date{position:relative;height:320vh;background:#141011;color:#FBF4EA}
 .date .stick{--Ro:600px;--cx:120px;--rot:0deg;background:#141011}
 .date .wheel{position:absolute;left:calc(var(--cx) - var(--Ro));top:calc(50% - var(--Ro));width:calc(var(--Ro)*2);height:calc(var(--Ro)*2);transform:rotate(var(--rot));will-change:transform;opacity:0}
 .date .tl{position:absolute;left:calc(var(--Ro)*(1 - .29237));top:0;width:calc(var(--Ro)*.58474);height:calc(var(--Ro)*0.63660);margin:0;transform-origin:50% var(--Ro);transform:rotate(var(--a));overflow:hidden;background:#1d1617;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0.00 6.86 L4.06 5.77 L8.15 4.78 L12.26 3.87 L16.39 3.06 L20.55 2.35 L24.72 1.73 L28.91 1.20 L33.11 0.77 L37.33 0.43 L41.55 0.19 L45.77 0.05 L50.00 0.00 L54.23 0.05 L58.45 0.19 L62.67 0.43 L66.89 0.77 L71.09 1.20 L75.28 1.73 L79.45 2.35 L83.61 3.06 L87.74 3.87 L91.85 4.78 L95.94 5.77 L100.00 6.86 L69.00 100.00 L67.46 99.59 L65.90 99.21 L64.34 98.86 L62.77 98.56 L61.19 98.28 L59.61 98.05 L58.01 97.85 L56.42 97.68 L54.82 97.56 L53.21 97.46 L51.61 97.41 L50.00 97.39 L48.39 97.41 L46.79 97.46 L45.18 97.56 L43.58 97.68 L41.99 97.85 L40.39 98.05 L38.81 98.28 L37.23 98.56 L35.66 98.86 L34.10 99.21 L32.54 99.59 L31.00 100.00 Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0.00 6.86 L4.06 5.77 L8.15 4.78 L12.26 3.87 L16.39 3.06 L20.55 2.35 L24.72 1.73 L28.91 1.20 L33.11 0.77 L37.33 0.43 L41.55 0.19 L45.77 0.05 L50.00 0.00 L54.23 0.05 L58.45 0.19 L62.67 0.43 L66.89 0.77 L71.09 1.20 L75.28 1.73 L79.45 2.35 L83.61 3.06 L87.74 3.87 L91.85 4.78 L95.94 5.77 L100.00 6.86 L69.00 100.00 L67.46 99.59 L65.90 99.21 L64.34 98.86 L62.77 98.56 L61.19 98.28 L59.61 98.05 L58.01 97.85 L56.42 97.68 L54.82 97.56 L53.21 97.46 L51.61 97.41 L50.00 97.39 L48.39 97.41 L46.79 97.46 L45.18 97.56 L43.58 97.68 L41.99 97.85 L40.39 98.05 L38.81 98.28 L37.23 98.56 L35.66 98.86 L34.10 99.21 L32.54 99.59 L31.00 100.00 Z'/%3E%3C/svg%3E") center/100% 100% no-repeat}
@@ -263,6 +263,19 @@ section.date{position:relative;height:560vh;background:#141011;color:#FBF4EA}
 .date .ring{position:absolute;left:calc(var(--cx) - var(--Ro)*.355);top:calc(50% - var(--Ro)*.355);width:calc(var(--Ro)*.71);height:calc(var(--Ro)*.71);border-radius:50%;border:1px solid rgba(251,244,234,.2);pointer-events:none;opacity:0}
 .date .hub{position:absolute;top:50%;left:0;width:calc(var(--cx) + var(--Ro)*.34);transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-left:max(10px,env(safe-area-inset-left,0px));box-sizing:border-box;z-index:2;opacity:0;will-change:opacity}
 .date .hk{font-size:clamp(9px,calc(var(--Ro)*.017),12px);letter-spacing:.3em;opacity:.8}
+.date .clock{position:absolute;left:calc(var(--cx) - var(--Ro)*.33);top:calc(50% - var(--Ro)*.33);width:calc(var(--Ro)*.66);height:calc(var(--Ro)*.66);border-radius:50%;pointer-events:none;opacity:0;z-index:1}
+.date .clock::before,.date .clock::after{content:"";position:absolute;inset:0;border-radius:50%}
+.date .clock::before{background:repeating-conic-gradient(from -.4deg,rgba(251,244,234,.32) 0 .8deg,transparent .8deg 6deg);-webkit-mask:radial-gradient(closest-side,transparent calc(100% - 6px),#000 calc(100% - 5px));mask:radial-gradient(closest-side,transparent calc(100% - 6px),#000 calc(100% - 5px))}
+.date .clock::after{background:repeating-conic-gradient(from -.9deg,rgba(251,244,234,.75) 0 1.8deg,transparent 1.8deg 30deg);-webkit-mask:radial-gradient(closest-side,transparent calc(100% - 13px),#000 calc(100% - 12px));mask:radial-gradient(closest-side,transparent calc(100% - 13px),#000 calc(100% - 12px))}
+.date .hand{position:absolute;left:50%;bottom:50%;transform-origin:50% 100%;transform:translateX(-50%) rotate(var(--d,0deg));background:#FBF4EA;border-radius:2px}
+.date .hh{width:3px;height:25%;opacity:.38}
+.date .hm{width:2px;height:37%;opacity:.38}
+.date .hsec{width:1px;height:43%;opacity:.7;transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.date .pin{position:absolute;left:50%;top:50%;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;border-radius:50%;background:#FBF4EA;opacity:.7}
+.date .cd{display:flex;gap:calc(var(--Ro)*.022);margin-top:.7em}
+.date .cd span{display:flex;flex-direction:column;align-items:center;min-width:2.1em}
+.date .cd b{font-family:var(--num);font-weight:400;font-size:clamp(20px,calc(var(--Ro)*.056),40px);line-height:1;font-variant-numeric:tabular-nums}
+.date .cd i{font-style:normal;font-size:clamp(7.5px,calc(var(--Ro)*.013),10px);letter-spacing:.2em;margin-top:.7em;opacity:.75}
 .date .hd{font-family:var(--num);font-size:clamp(21px,calc(var(--Ro)*.058),44px);line-height:1.1;letter-spacing:.03em;margin:.3em 0 .25em;white-space:nowrap}
 .date .hs{font-size:clamp(9px,calc(var(--Ro)*.017),12px);letter-spacing:.3em;opacity:.8}
 /* ---------- 05 MOMENTS : equal photos, staggered left/right, slide in ---------- */
@@ -424,10 +437,10 @@ section.date{position:relative;height:560vh;background:#141011;color:#FBF4EA}
     <div class="stick" id="dStick">
       <div class="wheel" id="dWheel"><figure class="tl" style="--a:0deg"><video muted playsinline loop preload="none" poster="assets/video/v00130_1.jpg" data-src="assets/video/v00130_1.mp4"></video></figure><figure class="tl" style="--a:36deg"><video muted playsinline loop preload="none" poster="assets/video/v00153_3.jpg" data-src="assets/video/v00153_3.mp4"></video></figure><figure class="tl" style="--a:72deg"><video muted playsinline loop preload="none" poster="assets/video/v00121.jpg" data-src="assets/video/v00121.mp4"></video></figure><figure class="tl" style="--a:108deg"><video muted playsinline loop preload="none" poster="assets/video/v00134_1.jpg" data-src="assets/video/v00134_1.mp4"></video></figure><figure class="tl" style="--a:144deg"><video muted playsinline loop preload="none" poster="assets/video/v00162_1.jpg" data-src="assets/video/v00162_1.mp4"></video></figure><figure class="tl" style="--a:180deg"><video muted playsinline loop preload="none" poster="assets/video/v00153_1.jpg" data-src="assets/video/v00153_1.mp4"></video></figure><figure class="tl" style="--a:216deg"><video muted playsinline loop preload="none" poster="assets/video/v00185_4.jpg" data-src="assets/video/v00185_4.mp4"></video></figure><figure class="tl" style="--a:252deg"><video muted playsinline loop preload="none" poster="assets/video/v00141_1.jpg" data-src="assets/video/v00141_1.mp4"></video></figure><figure class="tl" style="--a:288deg"><video muted playsinline loop preload="none" poster="assets/video/v00168_1.jpg" data-src="assets/video/v00168_1.mp4"></video></figure><figure class="tl" style="--a:324deg"><video muted playsinline loop preload="none" poster="assets/video/v00185_2.jpg" data-src="assets/video/v00185_2.mp4"></video></figure></div>
       <div class="ring" id="dRing"></div>
+      <div class="clock" id="dClock"><i class="hand hh" id="hH"></i><i class="hand hm" id="hM"></i><i class="hand hsec" id="hS"></i><i class="pin"></i></div>
       <div class="hub" id="dHub">
-        <div class="hk caps">Save the date</div>
-        <div class="hd">18 · 12 · 2026</div>
-        <div class="hs caps">Thứ Sáu · 19:00</div>
+        <div class="hk caps">Đếm ngược</div>
+        <div class="cd"><span><b id="cdD">00</b><i class="caps">Ngày</i></span><span><b id="cdH">00</b><i class="caps">Giờ</i></span><span><b id="cdM">00</b><i class="caps">Phút</i></span><span><b id="cdS">00</b><i class="caps">Giây</i></span></div>
       </div>
     </div>
   </section>
@@ -523,7 +536,7 @@ section.date{position:relative;height:560vh;background:#141011;color:#FBF4EA}
   var vw,vh,W0,H0,HEAD, L={};
   var couple=$('couple'), cFrame=$('cFrame'), cIn=$('cIn'), cImg2=$('cImg2'), cW2=$('cImg2Wrap'), cTxt=$('cTxt'), cKick=$('cKick'), cN1=$('cN1'), cN2=$('cN2'), cAnd=$('cAnd'), cDate=$('cDate'), eL=$('eL'), eR=$('eR'), eB=$('eB'), cMat=$('cMat'), cGlow=$('cGlow');
   var hb=$('heroBlur'), hs=$('heroSharp'), hv=$('heroVeil'), hf=$('heroFoot'), hWel=$('hWel'), hDate=$('hDate');
-  var dS=$('date'), dStick=$('dStick'), dWheel=$('dWheel'), dHub=$('dHub'), dRing=$('dRing'), dScrollRot=0;
+  var dS=$('date'), dClock=$('dClock'), dStick=$('dStick'), dWheel=$('dWheel'), dHub=$('dHub'), dRing=$('dRing'), dScrollRot=0;
   var zoom=$('zoom'), zPic=$('zPic'), zIn=$('zIn'), zA=$('zA'), zB=$('zB'), zK=$('zK');
   var dollies=[].slice.call(document.querySelectorAll('[data-dolly]')).map(function(el){return {el:el}});
   var zooms=[].slice.call(document.querySelectorAll('[data-zoom]')).map(function(el){return {el:el,par:parseFloat(el.getAttribute('data-par')||0)}});
@@ -627,11 +640,11 @@ section.date{position:relative;height:560vh;background:#141011;color:#FBF4EA}
       set(pp.el,'transform','translate3d(0,'+(-c*pp.k*vh).toFixed(1)+'px,0)');
     }
 
-    /* date: wheel fades in, scroll spins it ~3.5 turns */
+    /* date: wheel fades in, scroll spins it 1.5 turns over ~3 screens */
     if(near(L.date.top,L.date.h,y)){
       var dp=prog('date',y), wi=eout(seg(dp,0,.06));
-      set(dWheel,'opacity',wi.toFixed(3)); set(dRing,'opacity',wi.toFixed(3)); set(dHub,'opacity',eout(seg(dp,.02,.09)).toFixed(3));
-      dScrollRot=-dp*1260;
+      set(dWheel,'opacity',wi.toFixed(3)); set(dRing,'opacity',wi.toFixed(3)); var hi=eout(seg(dp,.02,.09)).toFixed(3); set(dHub,'opacity',hi); set(dClock,'opacity',hi);
+      dScrollRot=-dp*540;
     }
 
     /* dolly: slow push-in on background photos */
@@ -663,8 +676,16 @@ section.date{position:relative;height:560vh;background:#141011;color:#FBF4EA}
     if(!dWheel) return;
     var tiles=[].slice.call(dWheel.querySelectorAll('.tl')), vids=tiles.map(function(t){return t.querySelector('video')}), on=false, spin=0, lastT=0, lastChk=0, Ro=600, CX=120;
     var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function size(){ var w=innerWidth, h=innerHeight; Ro=w<820?Math.min(h*.5,w*.98):Math.min(h*1.05,w*.56); CX=Ro*(w<820?.22:.26); dStick.style.setProperty('--Ro',Ro.toFixed(0)+'px'); dStick.style.setProperty('--cx',CX.toFixed(0)+'px'); }
+    function size(){ var w=innerWidth, h=innerHeight; Ro=w<820?Math.min(h*.46,(w-16)/1.3):Math.min(h*1.05,w*.56); CX=Ro*(w<820?.3:.26); dStick.style.setProperty('--Ro',Ro.toFixed(0)+'px'); dStick.style.setProperty('--cx',CX.toFixed(0)+'px'); }
     size(); addEventListener('resize',size);
+    var T=Date.UTC(2026,11,18,12,0,0), cdE=['cdD','cdH','cdM','cdS'].map($), hH=$('hH'), hM=$('hM'), hS=$('hS'), sAcc=0, lastSec=-1;
+    function p2(n){ return (n<10?'0':'')+n; }
+    function tick(){ var now=new Date(), d=Math.max(0,Math.floor((T-now.getTime())/1000)), v=[Math.floor(d/86400),Math.floor(d%86400/3600),Math.floor(d%3600/60),d%60];
+      for(var k=0;k<4;k++){ var s=p2(v[k]); if(cdE[k].textContent!==s) cdE[k].textContent=s; }
+      var sec=now.getSeconds(), mi=now.getMinutes()+sec/60, hr=now.getHours()%12+mi/60;
+      if(lastSec>=0){ sAcc+=((sec-lastSec+60)%60)*6; } else sAcc=sec*6; lastSec=sec;
+      hS.style.setProperty('--d',sAcc+'deg'); hM.style.setProperty('--d',(mi*6).toFixed(2)+'deg'); hH.style.setProperty('--d',(hr*30).toFixed(2)+'deg'); }
+    tick(); setInterval(function(){ if(on) tick(); },1000);
     function check(rot){
       var w=innerWidth,h=innerHeight,cx=CX,cy=h/2,R=Ro*.69,m=Ro*.05;
       for(var i=0;i<tiles.length;i++){ var th=(i*36+rot)*Math.PI/180, x=cx+R*Math.sin(th), yy=cy-R*Math.cos(th), vis=on&&x>-m&&x<w+m&&yy>-m&&yy<h+m, v=vids[i];
