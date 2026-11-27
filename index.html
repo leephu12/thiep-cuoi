@@ -712,15 +712,16 @@ section.date{position:relative;height:320vh;background:#141011;color:#FBF4EA}
   (function(){
     var el=document.getElementById('bgm'), b=document.getElementById('musicBtn'); if(!el||!b) return;
     var AC=window.AudioContext||window.webkitAudioContext, TARGET=.55, want=true, on=false;
+    try{ if(navigator.audioSession) navigator.audioSession.type='playback'; }catch(x){} /* iOS: play even when the phone is on silent */
     function ui(v){ on=v; b.classList.toggle('on',v); b.setAttribute('aria-pressed',v?'true':'false'); b.setAttribute('aria-label',v?'Tắt nhạc nền':'Bật nhạc nền'); }
-    var evs=['pointerdown','touchend','keydown'];
+    var evs=['pointerdown','pointerup','touchstart','touchend','mousedown','click','keydown'];
     function off(){ evs.forEach(function(n){ window.removeEventListener(n,first,true); }); }
     function first(e){ if(e&&e.target&&b.contains(e.target)) return; if(want) start(true); }
     evs.forEach(function(n){ window.addEventListener(n,first,true); });
     if(AC){
-      var ctx=null, gain, buf=null, src=null, loading=null;
+      var ctx=null, gain, buf=null, src=null, loading=null, abP=fetch(el.getAttribute('src')).then(function(r){return r.arrayBuffer()});
       function load(){ if(loading) return loading; ctx=ctx||new AC(); gain=gain||ctx.createGain(); gain.gain.value=0; gain.connect(ctx.destination);
-        loading=fetch(el.getAttribute('src')).then(function(r){return r.arrayBuffer()}).then(function(ab){ return new Promise(function(res,rej){ ctx.decodeAudioData(ab,res,rej); }); }).then(function(d){ buf=d; return d; });
+        loading=abP.then(function(ab){ return new Promise(function(res,rej){ ctx.decodeAudioData(ab,res,rej); }); }).then(function(d){ buf=d; return d; });
         return loading; }
       function ramp(to,sec){ var t=ctx.currentTime; gain.gain.cancelScheduledValues(t); gain.gain.setValueAtTime(gain.gain.value,t); gain.gain.linearRampToValueAtTime(to,t+sec); }
       function start(fromGesture){
